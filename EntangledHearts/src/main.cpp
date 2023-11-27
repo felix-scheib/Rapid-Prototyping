@@ -1,18 +1,40 @@
 #include <Arduino.h>
 
-// put function declarations here:
-int myFunction(int, int);
+#define GPIO12 12
 
-void setup() {
-  // put your setup code here, to run once:
-  int result = myFunction(2, 3);
+int prev_state = LOW;
+int current_state = LOW;
+
+void setup()
+{
+  Serial.begin(9600);
+
+  pinMode(GPIO12, INPUT);
+
+  Serial.println("Initialization done!");
 }
 
-void loop() {
-  // put your main code here, to run repeatedly:
+void loop()
+{
+  //Button
+
+  current_state = digitalRead(GPIO12);
+
+  if (current_state != prev_state)
+  {
+    if (current_state == HIGH)
+    {
+      Serial.println("Button pressed!");
+    }
+
+    if (current_state == LOW)
+    {
+      Serial.println("Button released!");
+    }
+    
+    delay(50);
+  }
+
+  prev_state = current_state;
 }
 
-// put function definitions here:
-int myFunction(int x, int y) {
-  return x + y;
-}
