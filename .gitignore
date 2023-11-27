@@ -3,7 +3,7 @@
 *.piolibdeps
 *.clang_complete
 *.gcc-flags.json
-*.pio
+*.pio/
 
 #VS Code Files
 *.vscode/
