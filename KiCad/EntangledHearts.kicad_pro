@@ -247,7 +247,7 @@
     "pinned_symbol_libs": []
   },
   "meta": {
-    "filename": "KiCad.kicad_pro",
+    "filename": "KiCadTest.kicad_pro",
     "version": 1
   },
   "net_settings": {
@@ -324,7 +324,7 @@
   },
   "sheets": [
     [
-      "02eb7468-7b8a-4551-8744-e626c7a0d8ad",
+      "e3ecd05f-221d-4bf7-affc-2bbbc556444e",
       ""
     ]
   ],
