@@ -2430,7 +2430,7 @@
     (effects (font (size 2 2)) (justify left bottom))
     (uuid cff45901-fb53-43ad-8061-63b5f692633b)
   )
-  (text "Spannungsregelung\n" (at 187.96 207.01 0)
+  (text "Spannungsregelung\n" (at 195.58 194.31 0)
     (effects (font (size 2 2)) (justify left bottom))
     (uuid e1457e2d-1fb9-4a17-9b30-8a187bb6b65c)
   )
