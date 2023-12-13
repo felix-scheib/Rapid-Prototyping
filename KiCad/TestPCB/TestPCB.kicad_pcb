@@ -3743,6 +3743,11 @@
       (net 64 "unconnected-(S1-Pad3)") (pinfunction "3") (pintype "passive") (tstamp b8656859-ce7c-4607-b9b5-c3514358ed5f))
     (pad "4" smd rect (at -2.05 -0.8) (size 0.9 1) (layers "F.Cu" "F.Paste" "F.Mask")
       (net 65 "unconnected-(S1-Pad4)") (pinfunction "4") (pintype "passive") (tstamp df7b8f98-414c-47ec-a1c6-1c2e7e236e3c))
+    (model "D:/_HDA/rapid-prototyping/KiCad/_Libraries/KMR631NGULCLFS/KMR631NGULCLFS.stp"
+      (offset (xyz 0 0 0))
+      (scale (xyz 1 1 1))
+      (rotate (xyz -90 0 0))
+    )
   )
 
   (footprint "TestPoint:TestPoint_Pad_2.0x2.0mm" (layer "F.Cu")
@@ -4588,7 +4593,7 @@
       (net 25 "Net-(U4-SDA)") (pinfunction "1") (pintype "passive") (tstamp 10da2f3d-d96b-4ea5-844d-277748c21bc7))
   )
 
-  (gr_rect (start 177.8 127) (end 228.6 50.8)
+  (gr_rect (start 177.8 50.8) (end 228.6 127)
     (stroke (width 0.1) (type default)) (fill none) (layer "Edge.Cuts") (tstamp 3387587b-d31e-412f-bfd7-ba0d4eb91e76))
   (gr_rect (start 50.8 50.8) (end 152.4 127)
     (stroke (width 0.1) (type default)) (fill none) (layer "Edge.Cuts") (tstamp 450c0b86-a3b2-42db-a328-224ba572d3df))
