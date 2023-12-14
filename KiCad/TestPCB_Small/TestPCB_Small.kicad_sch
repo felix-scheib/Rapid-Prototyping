@@ -1270,6 +1270,9 @@
   (junction (at 128.27 254) (diameter 0) (color 0 0 0 0)
     (uuid 0235fa36-41a4-4230-bba9-5b7dba599fd2)
   )
+  (junction (at 317.5 210.82) (diameter 0) (color 0 0 0 0)
+    (uuid 0336132f-6162-47a8-aa1c-f6ecd1304fcc)
+  )
   (junction (at 184.15 36.83) (diameter 0) (color 0 0 0 0)
     (uuid 034ffeba-5846-411f-9bf4-06927f1fe92d)
   )
@@ -1300,9 +1303,6 @@
   (junction (at 133.35 52.07) (diameter 0) (color 0 0 0 0)
     (uuid 2aa6b8e3-be20-46de-b948-0467c43d1d3b)
   )
-  (junction (at 279.4 48.26) (diameter 0) (color 0 0 0 0)
-    (uuid 2c8a2d85-7c48-46e5-ac0c-91b3790a4607)
-  )
   (junction (at 29.21 226.06) (diameter 0) (color 0 0 0 0)
     (uuid 2dd33c30-280c-4524-9902-d2db8ba16b45)
   )
@@ -1311,6 +1311,9 @@
   )
   (junction (at 209.55 36.83) (diameter 0) (color 0 0 0 0)
     (uuid 3dec5862-fc36-4c40-8830-da006d5c1d8b)
+  )
+  (junction (at 259.08 129.54) (diameter 0) (color 0 0 0 0)
+    (uuid 401d3d1f-ad29-499b-a671-3b988412a0d9)
   )
   (junction (at 57.15 147.32) (diameter 0) (color 0 0 0 0)
     (uuid 41400a10-987c-491a-ac0b-ef106bf8ba96)
@@ -1342,20 +1345,20 @@
   (junction (at 295.91 43.18) (diameter 0) (color 0 0 0 0)
     (uuid 52a8413e-34ea-442c-8481-d11595515fa1)
   )
+  (junction (at 259.08 119.38) (diameter 0) (color 0 0 0 0)
+    (uuid 5315ec27-f61e-4a76-8501-b80577e1cccc)
+  )
   (junction (at 133.35 36.83) (diameter 0) (color 0 0 0 0)
     (uuid 55f1bc1b-35a4-47ec-8c4a-26fb55ada820)
   )
-  (junction (at 330.2 43.18) (diameter 0) (color 0 0 0 0)
-    (uuid 5a0b6515-b4e0-4c22-9c57-4348c85f3cdb)
+  (junction (at 368.3 144.78) (diameter 0) (color 0 0 0 0)
+    (uuid 5d09c665-e07c-4da0-b0af-78fe426536e1)
   )
   (junction (at 196.85 254) (diameter 0) (color 0 0 0 0)
     (uuid 5eee9ca8-4c3a-49dd-b718-9258d1b57f83)
   )
   (junction (at 128.27 215.9) (diameter 0) (color 0 0 0 0)
     (uuid 60ee4f02-df19-46bd-9c11-89ef0ca765d5)
-  )
-  (junction (at 330.2 74.93) (diameter 0) (color 0 0 0 0)
-    (uuid 6963edb8-d3e3-49c7-ba39-1af79140ff2d)
   )
   (junction (at 177.8 254) (diameter 0) (color 0 0 0 0)
     (uuid 696c6f02-8d6e-444d-b7e3-3c9cb03195a5)
@@ -1374,6 +1377,9 @@
   )
   (junction (at 95.25 52.07) (diameter 0) (color 0 0 0 0)
     (uuid 7e4fcf2c-c04f-437f-bf73-b6fcee1fcfae)
+  )
+  (junction (at 368.3 119.38) (diameter 0) (color 0 0 0 0)
+    (uuid 7ec0c596-90e9-4df8-876b-ed9657da90da)
   )
   (junction (at 107.95 52.07) (diameter 0) (color 0 0 0 0)
     (uuid 7f309736-00e4-40c9-9ffa-ae37f61ab6ed)
@@ -1396,14 +1402,8 @@
   (junction (at 107.95 36.83) (diameter 0) (color 0 0 0 0)
     (uuid 9e4f8719-7889-41d1-bf0e-adf693f1c954)
   )
-  (junction (at 336.55 55.88) (diameter 0) (color 0 0 0 0)
-    (uuid a02fa8fa-f74f-49ea-9c41-d85319d14000)
-  )
   (junction (at 184.15 52.07) (diameter 0) (color 0 0 0 0)
     (uuid a684dd23-de2c-4536-8624-afe452417223)
-  )
-  (junction (at 336.55 62.23) (diameter 0) (color 0 0 0 0)
-    (uuid aa4e8a91-82f4-40ae-a530-66a85619ed61)
   )
   (junction (at 379.73 137.16) (diameter 0) (color 0 0 0 0)
     (uuid ac99dfb4-a170-4fd0-8c13-42dd4e69eadd)
@@ -1423,6 +1423,9 @@
   (junction (at 379.73 119.38) (diameter 0) (color 0 0 0 0)
     (uuid c260d6f4-1029-4f1d-b3e8-5e232aab89b7)
   )
+  (junction (at 299.72 119.38) (diameter 0) (color 0 0 0 0)
+    (uuid c81dbaa1-4f98-4b63-9071-a8e54ba52b19)
+  )
   (junction (at 196.85 36.83) (diameter 0) (color 0 0 0 0)
     (uuid c97406d2-c612-4248-95ce-279d1844ce03)
   )
@@ -1435,9 +1438,6 @@
   (junction (at 95.25 254) (diameter 0) (color 0 0 0 0)
     (uuid cd009e2c-c02c-4df8-b494-6501444a8067)
   )
-  (junction (at 330.2 36.83) (diameter 0) (color 0 0 0 0)
-    (uuid d0585804-cae0-449c-becf-4ae504754a87)
-  )
   (junction (at 309.88 119.38) (diameter 0) (color 0 0 0 0)
     (uuid d7e13614-28c5-4cf8-83d6-152c8bc0fe56)
   )
@@ -1447,14 +1447,17 @@
   (junction (at 76.2 226.06) (diameter 0) (color 0 0 0 0)
     (uuid dd311b8e-f92d-4af6-a341-013ad85ad227)
   )
+  (junction (at 309.88 210.82) (diameter 0) (color 0 0 0 0)
+    (uuid e35e2eb5-2696-4d07-914f-ab265ea7e3d5)
+  )
   (junction (at 222.25 254) (diameter 0) (color 0 0 0 0)
     (uuid e37fd64e-994d-46df-ba3e-e98399eacf27)
   )
   (junction (at 88.9 73.66) (diameter 0) (color 0 0 0 0)
     (uuid e98a87bd-92f9-4e18-961b-bdfd3094543a)
   )
-  (junction (at 355.6 52.07) (diameter 0) (color 0 0 0 0)
-    (uuid e9a6023b-72da-4b50-9622-fded4a7aab53)
+  (junction (at 259.08 210.82) (diameter 0) (color 0 0 0 0)
+    (uuid ea62fa21-9505-4854-9c6e-d3366bf993d3)
   )
   (junction (at 292.1 49.53) (diameter 0) (color 0 0 0 0)
     (uuid f44667b7-2fc4-4e3c-a912-3e02b28d97cd)
@@ -1476,6 +1479,10 @@
     (stroke (width 0) (type default))
     (uuid 003601ea-2c0a-4ef9-a3d9-f6991f56cc8f)
   )
+  (wire (pts (xy 259.08 119.38) (xy 246.38 119.38))
+    (stroke (width 0) (type default))
+    (uuid 094486b2-1a0a-4e94-bbb2-02da3172d9f5)
+  )
   (wire (pts (xy 101.6 147.32) (xy 101.6 177.8))
     (stroke (width 0) (type default))
     (uuid 097d734d-0ed6-468b-92b3-c012e3a17010)
@@ -1491,6 +1498,10 @@
   (wire (pts (xy 71.12 88.9) (xy 76.2 88.9))
     (stroke (width 0) (type default))
     (uuid 0efd0e04-4ac1-4809-9745-e16584dbcb05)
+  )
+  (wire (pts (xy 246.38 166.37) (xy 246.38 210.82))
+    (stroke (width 0) (type default))
+    (uuid 0f4189ff-8a86-45ed-af66-e389de568190)
   )
   (wire (pts (xy 95.25 36.83) (xy 107.95 36.83))
     (stroke (width 0) (type default))
@@ -1532,7 +1543,7 @@
     (stroke (width 0) (type default))
     (uuid 18133dbd-f452-4eba-9607-99292731fd05)
   )
-  (wire (pts (xy 355.6 144.78) (xy 360.68 144.78))
+  (wire (pts (xy 355.6 144.78) (xy 368.3 144.78))
     (stroke (width 0) (type default))
     (uuid 18297289-e9f5-4ef9-b555-65a047b8d73f)
   )
@@ -1564,10 +1575,6 @@
     (stroke (width 0) (type default))
     (uuid 1f1ca84c-ba36-4bd3-a123-1da4e7fcebb2)
   )
-  (wire (pts (xy 279.4 48.26) (xy 285.75 48.26))
-    (stroke (width 0) (type default))
-    (uuid 1f292b85-7488-45f1-9a13-5fef917bdbe7)
-  )
   (wire (pts (xy 355.6 170.18) (xy 360.68 170.18))
     (stroke (width 0) (type default))
     (uuid 205697cd-3acc-40eb-afa7-a11db0353139)
@@ -1579,10 +1586,6 @@
   (wire (pts (xy 63.5 58.42) (xy 63.5 66.04))
     (stroke (width 0) (type default))
     (uuid 23367180-6685-4f11-a9d8-f08cea0417fd)
-  )
-  (wire (pts (xy 323.85 52.07) (xy 323.85 55.88))
-    (stroke (width 0) (type default))
-    (uuid 24aad989-f621-44dd-8ce8-60bc8f305388)
   )
   (wire (pts (xy 85.09 137.16) (xy 85.09 134.62))
     (stroke (width 0) (type default))
@@ -1603,6 +1606,10 @@
   (wire (pts (xy 177.8 250.19) (xy 177.8 254))
     (stroke (width 0) (type default))
     (uuid 2b14f8b0-b5c2-4216-aca9-b3c577b34548)
+  )
+  (wire (pts (xy 246.38 210.82) (xy 259.08 210.82))
+    (stroke (width 0) (type default))
+    (uuid 2c6a31be-80ed-40c8-9ccd-ef5f1ccf613f)
   )
   (wire (pts (xy 186.69 234.95) (xy 184.15 234.95))
     (stroke (width 0) (type default))
@@ -1636,17 +1643,25 @@
     (stroke (width 0) (type default))
     (uuid 3138f240-34b5-42ee-97f5-2707ec817a21)
   )
+  (wire (pts (xy 317.5 210.82) (xy 309.88 210.82))
+    (stroke (width 0) (type default))
+    (uuid 33b869dc-af0b-45c5-b8cd-2df03c35252d)
+  )
+  (wire (pts (xy 299.72 119.38) (xy 259.08 119.38))
+    (stroke (width 0) (type default))
+    (uuid 34253e49-2277-41b6-8afc-5706bbfd5f34)
+  )
   (wire (pts (xy 95.25 215.9) (xy 128.27 215.9))
     (stroke (width 0) (type default))
     (uuid 343f4bb8-bd43-493c-86e6-e6b3cc858040)
   )
+  (wire (pts (xy 259.08 119.38) (xy 259.08 120.65))
+    (stroke (width 0) (type default))
+    (uuid 35e9ca7b-325e-45cd-89df-08e44db1e325)
+  )
   (wire (pts (xy 182.88 133.35) (xy 185.42 133.35))
     (stroke (width 0) (type default))
     (uuid 39074e9b-0b89-4cfd-ba45-4eebbcbd84c2)
-  )
-  (wire (pts (xy 336.55 55.88) (xy 342.9 55.88))
-    (stroke (width 0) (type default))
-    (uuid 3b1b162d-b6c4-4637-9cf5-2529256a25d2)
   )
   (wire (pts (xy 387.35 185.42) (xy 392.43 185.42))
     (stroke (width 0) (type default))
@@ -1744,17 +1759,21 @@
     (stroke (width 0) (type default))
     (uuid 536a5963-a21e-4cdc-bd5d-da92f29a23ff)
   )
-  (wire (pts (xy 323.85 55.88) (xy 336.55 55.88))
-    (stroke (width 0) (type default))
-    (uuid 5a8113e5-3a88-46c2-901b-8e7efee0b26e)
-  )
   (wire (pts (xy 295.91 43.18) (xy 300.99 43.18))
     (stroke (width 0) (type default))
     (uuid 5ab53af6-a247-4a27-8e63-62afbe67fc81)
   )
+  (wire (pts (xy 259.08 129.54) (xy 264.16 129.54))
+    (stroke (width 0) (type default))
+    (uuid 5c20cdd6-706e-4cf9-929b-9a906412c9c0)
+  )
   (wire (pts (xy 82.55 52.07) (xy 82.55 48.26))
     (stroke (width 0) (type default))
     (uuid 5cc9d97b-c2a4-474a-ba47-94766f8e3aae)
+  )
+  (wire (pts (xy 266.7 48.26) (xy 279.4 48.26))
+    (stroke (width 0) (type default))
+    (uuid 5d1697c3-b3e6-4e66-95d5-7e1f158639f7)
   )
   (wire (pts (xy 69.85 71.12) (xy 69.85 50.8))
     (stroke (width 0) (type default))
@@ -1768,6 +1787,10 @@
     (stroke (width 0) (type default))
     (uuid 631fc8d3-5cd2-482e-82c3-de3bbe2f868c)
   )
+  (wire (pts (xy 259.08 128.27) (xy 259.08 129.54))
+    (stroke (width 0) (type default))
+    (uuid 63b1c0e2-b82b-4746-937a-056803725233)
+  )
   (wire (pts (xy 57.15 149.86) (xy 67.31 149.86))
     (stroke (width 0) (type default))
     (uuid 6834df76-9bf6-4907-a800-c1c206fe784d)
@@ -1779,6 +1802,10 @@
   (wire (pts (xy 63.5 55.88) (xy 44.45 55.88))
     (stroke (width 0) (type default))
     (uuid 6a3f9eb6-90fa-47da-b4a4-28f5fe3981a3)
+  )
+  (wire (pts (xy 246.38 119.38) (xy 246.38 158.75))
+    (stroke (width 0) (type default))
+    (uuid 6aacb0b8-f380-4d89-b2db-dc99ad7b9f60)
   )
   (wire (pts (xy 29.21 254) (xy 63.5 254))
     (stroke (width 0) (type default))
@@ -1800,10 +1827,6 @@
     (stroke (width 0) (type default))
     (uuid 6e1d8d5f-46de-47be-a97f-0a2f7f26663e)
   )
-  (wire (pts (xy 355.6 43.18) (xy 344.17 43.18))
-    (stroke (width 0) (type default))
-    (uuid 70083801-aaec-4828-b0ac-8df0c95e95fa)
-  )
   (wire (pts (xy 63.5 66.04) (xy 133.35 66.04))
     (stroke (width 0) (type default))
     (uuid 718ce594-58fa-49e5-b9f2-65968a3588ae)
@@ -1823,6 +1846,10 @@
   (wire (pts (xy 44.45 154.94) (xy 67.31 154.94))
     (stroke (width 0) (type default))
     (uuid 77dfa814-5122-40b8-a682-a387ebafdeab)
+  )
+  (wire (pts (xy 368.3 210.82) (xy 317.5 210.82))
+    (stroke (width 0) (type default))
+    (uuid 7810bf04-00d7-40cd-9201-f3548f551cd8)
   )
   (wire (pts (xy 88.9 73.66) (xy 133.35 73.66))
     (stroke (width 0) (type default))
@@ -1847,10 +1874,6 @@
   (wire (pts (xy 222.25 248.92) (xy 222.25 254))
     (stroke (width 0) (type default))
     (uuid 7b6f402a-7df5-443e-a4ac-7e505af8a613)
-  )
-  (wire (pts (xy 330.2 43.18) (xy 336.55 43.18))
-    (stroke (width 0) (type default))
-    (uuid 7e9cc1a4-a0ba-4ba6-8245-5809feb02338)
   )
   (wire (pts (xy 57.15 233.68) (xy 76.2 233.68))
     (stroke (width 0) (type default))
@@ -1892,6 +1915,10 @@
     (stroke (width 0) (type default))
     (uuid 8935d563-8b44-4bf3-a86d-bcc40d6e6a22)
   )
+  (wire (pts (xy 368.3 162.56) (xy 368.3 210.82))
+    (stroke (width 0) (type default))
+    (uuid 89885ef7-d4ed-48b5-a1c0-7f9bebcd2604)
+  )
   (wire (pts (xy 120.65 36.83) (xy 107.95 36.83))
     (stroke (width 0) (type default))
     (uuid 89af254b-5a4a-4184-b67c-79a0f454f596)
@@ -1900,7 +1927,11 @@
     (stroke (width 0) (type default))
     (uuid 8b2a6f67-b4bf-4dff-bed4-0687ab8172cd)
   )
-  (wire (pts (xy 259.08 129.54) (xy 264.16 129.54))
+  (wire (pts (xy 259.08 173.99) (xy 259.08 210.82))
+    (stroke (width 0) (type default))
+    (uuid 8bb7ac28-0065-4f48-85cf-75b333d867de)
+  )
+  (wire (pts (xy 254 129.54) (xy 259.08 129.54))
     (stroke (width 0) (type default))
     (uuid 8bf4bcaf-82d6-4c38-b553-54df040da997)
   )
@@ -1911,10 +1942,6 @@
   (wire (pts (xy 177.8 215.9) (xy 177.8 232.41))
     (stroke (width 0) (type default))
     (uuid 8f3ab38d-e827-4925-80a3-88e7ab2258ab)
-  )
-  (wire (pts (xy 330.2 36.83) (xy 330.2 43.18))
-    (stroke (width 0) (type default))
-    (uuid 8fdbf887-f9c0-4828-9da6-cb9c8bbe8a29)
   )
   (wire (pts (xy 209.55 52.07) (xy 209.55 48.26))
     (stroke (width 0) (type default))
@@ -1944,9 +1971,9 @@
     (stroke (width 0) (type default))
     (uuid 97b52646-9cf4-489c-82a3-f41e0ec50aa8)
   )
-  (wire (pts (xy 285.75 48.26) (xy 285.75 74.93))
+  (wire (pts (xy 368.3 119.38) (xy 379.73 119.38))
     (stroke (width 0) (type default))
-    (uuid 98c94f09-8218-46d5-b378-7fe34ee531f4)
+    (uuid 98b43bf2-0b90-472c-9eeb-254e6d7147e2)
   )
   (wire (pts (xy 107.95 52.07) (xy 107.95 48.26))
     (stroke (width 0) (type default))
@@ -1960,6 +1987,10 @@
     (stroke (width 0) (type default))
     (uuid 9a6e6b60-a509-4174-8291-add6082ac447)
   )
+  (wire (pts (xy 259.08 210.82) (xy 309.88 210.82))
+    (stroke (width 0) (type default))
+    (uuid 9be0745d-ccb1-4bf3-b342-2d8579c537c1)
+  )
   (wire (pts (xy 50.8 160.02) (xy 67.31 160.02))
     (stroke (width 0) (type default))
     (uuid 9d4ddf63-24db-4027-a88f-8411f1168220)
@@ -1968,21 +1999,9 @@
     (stroke (width 0) (type default))
     (uuid 9e169e0f-c1fe-4757-ba61-4958cb366910)
   )
-  (wire (pts (xy 330.2 74.93) (xy 336.55 74.93))
-    (stroke (width 0) (type default))
-    (uuid 9e4e3106-9a54-4720-a15b-d049b4cb832e)
-  )
   (wire (pts (xy 57.15 228.6) (xy 63.5 228.6))
     (stroke (width 0) (type default))
     (uuid 9f8a8887-3459-419b-abf2-ff59dbcc00b2)
-  )
-  (wire (pts (xy 330.2 43.18) (xy 330.2 45.72))
-    (stroke (width 0) (type default))
-    (uuid a5521d6b-ddc3-402e-8256-e34688c68717)
-  )
-  (wire (pts (xy 266.7 48.26) (xy 279.4 48.26))
-    (stroke (width 0) (type default))
-    (uuid a5d61d83-39bf-4aed-b299-77221b501604)
   )
   (wire (pts (xy 292.1 49.53) (xy 318.77 49.53))
     (stroke (width 0) (type default))
@@ -2016,6 +2035,10 @@
     (stroke (width 0) (type default))
     (uuid ab8f4a1f-6045-4968-bffe-f9eed5bbe89b)
   )
+  (wire (pts (xy 368.3 127) (xy 368.3 144.78))
+    (stroke (width 0) (type default))
+    (uuid ac60d54f-1f69-4dd5-9d80-6d1d028dd0df)
+  )
   (wire (pts (xy 158.75 133.35) (xy 162.56 133.35))
     (stroke (width 0) (type default))
     (uuid ad665a26-2fe0-4dc1-aec7-e2a1a2336516)
@@ -2028,7 +2051,7 @@
     (stroke (width 0) (type default))
     (uuid ada7003c-f2d0-4250-887c-f55af9ee3fd4)
   )
-  (wire (pts (xy 309.88 119.38) (xy 379.73 119.38))
+  (wire (pts (xy 309.88 119.38) (xy 368.3 119.38))
     (stroke (width 0) (type default))
     (uuid afc98412-6736-4c04-b366-c4e327898561)
   )
@@ -2104,13 +2127,9 @@
     (stroke (width 0) (type default))
     (uuid c74daa92-7fc9-4046-b362-16660470e5ff)
   )
-  (wire (pts (xy 323.85 33.02) (xy 323.85 36.83))
+  (wire (pts (xy 259.08 129.54) (xy 259.08 166.37))
     (stroke (width 0) (type default))
-    (uuid c937b905-4db6-416a-9347-3504984afe43)
-  )
-  (wire (pts (xy 285.75 74.93) (xy 330.2 74.93))
-    (stroke (width 0) (type default))
-    (uuid c9384f36-d849-4c73-877d-3b5c7f0f6e96)
+    (uuid c7bce447-2558-4f17-835b-2fa2fb472f44)
   )
   (wire (pts (xy 222.25 52.07) (xy 209.55 52.07))
     (stroke (width 0) (type default))
@@ -2144,14 +2163,6 @@
     (stroke (width 0) (type default))
     (uuid d2ed495e-307f-44f0-ad0b-c7f5880f24e9)
   )
-  (wire (pts (xy 344.17 62.23) (xy 355.6 62.23))
-    (stroke (width 0) (type default))
-    (uuid d39e72ea-bd41-4cf3-822f-1acde235c6d6)
-  )
-  (wire (pts (xy 355.6 52.07) (xy 355.6 62.23))
-    (stroke (width 0) (type default))
-    (uuid d3abd41f-3955-443a-a6ba-bd3d73288b7f)
-  )
   (wire (pts (xy 309.88 210.82) (xy 309.88 205.74))
     (stroke (width 0) (type default))
     (uuid d3c0e7ad-a7b4-421d-ac33-dac9968118c8)
@@ -2163,10 +2174,6 @@
   (wire (pts (xy 95.25 36.83) (xy 82.55 36.83))
     (stroke (width 0) (type default))
     (uuid d5a45995-97bd-4239-b583-02d88c37e57d)
-  )
-  (wire (pts (xy 330.2 53.34) (xy 330.2 74.93))
-    (stroke (width 0) (type default))
-    (uuid d5d59554-c393-4122-a2d4-038295e0ab58)
   )
   (wire (pts (xy 29.21 226.06) (xy 31.75 226.06))
     (stroke (width 0) (type default))
@@ -2204,10 +2211,6 @@
     (stroke (width 0) (type default))
     (uuid de56af61-6818-4618-961b-332240eb0c75)
   )
-  (wire (pts (xy 279.4 48.26) (xy 279.4 54.61))
-    (stroke (width 0) (type default))
-    (uuid de67601f-39dc-4baf-ace2-b2496cf7310b)
-  )
   (wire (pts (xy 318.77 48.26) (xy 318.77 49.53))
     (stroke (width 0) (type default))
     (uuid df009928-1bd3-4cf8-9d73-37a853c5b8b0)
@@ -2240,10 +2243,6 @@
     (stroke (width 0) (type default))
     (uuid e3bfe6d2-dafa-4eae-a9f9-f0225b5f9c96)
   )
-  (wire (pts (xy 355.6 43.18) (xy 355.6 52.07))
-    (stroke (width 0) (type default))
-    (uuid e45208ac-27dd-4c34-95a9-0ab45236f902)
-  )
   (wire (pts (xy 171.45 52.07) (xy 158.75 52.07))
     (stroke (width 0) (type default))
     (uuid e4d2c058-0528-4439-a2bf-6f2c89734947)
@@ -2251,6 +2250,10 @@
   (wire (pts (xy 76.2 215.9) (xy 76.2 226.06))
     (stroke (width 0) (type default))
     (uuid e4d699a8-584f-4345-b5d8-df98e059e35d)
+  )
+  (wire (pts (xy 309.88 119.38) (xy 299.72 119.38))
+    (stroke (width 0) (type default))
+    (uuid e6320101-1fd7-4a9b-a024-1a1c39f5ad67)
   )
   (wire (pts (xy 196.85 254) (xy 209.55 254))
     (stroke (width 0) (type default))
@@ -2292,10 +2295,6 @@
     (stroke (width 0) (type default))
     (uuid f23714fa-e332-4269-84a5-a07ce2579c79)
   )
-  (wire (pts (xy 336.55 55.88) (xy 336.55 62.23))
-    (stroke (width 0) (type default))
-    (uuid f337271e-1c8c-41ef-ace7-9e9bdfa1116b)
-  )
   (wire (pts (xy 82.55 73.66) (xy 88.9 73.66))
     (stroke (width 0) (type default))
     (uuid f406d8d0-6b60-455e-a62b-219a7b05b819)
@@ -2311,10 +2310,6 @@
   (wire (pts (xy 266.7 43.18) (xy 292.1 43.18))
     (stroke (width 0) (type default))
     (uuid f5ea5cb1-90fc-45f3-80b5-6169eb626ff3)
-  )
-  (wire (pts (xy 323.85 36.83) (xy 330.2 36.83))
-    (stroke (width 0) (type default))
-    (uuid f68e2981-1b99-4a4d-ae3e-494d69b287ff)
   )
   (wire (pts (xy 146.05 232.41) (xy 146.05 241.3))
     (stroke (width 0) (type default))
@@ -2356,20 +2351,16 @@
     (stroke (width 0) (type default))
     (uuid fea3b8e4-c106-407e-9f05-13f8fc52d5bf)
   )
-  (wire (pts (xy 330.2 36.83) (xy 342.9 36.83))
-    (stroke (width 0) (type default))
-    (uuid fed32f54-016d-4f38-8c00-ea0e5940506a)
-  )
   (wire (pts (xy 318.77 52.07) (xy 323.85 52.07))
     (stroke (width 0) (type default))
     (uuid ff471815-d3ab-406e-996b-998dbc05d198)
   )
-  (wire (pts (xy 336.55 69.85) (xy 336.55 74.93))
+  (wire (pts (xy 368.3 144.78) (xy 368.3 154.94))
     (stroke (width 0) (type default))
-    (uuid ff862880-2384-4481-8f98-e4faae6927a0)
+    (uuid ffc2d98a-89f2-4fba-b3c9-325cda0ace11)
   )
 
-  (rectangle (start 254 25.4) (end 368.3 77.47)
+  (rectangle (start 254 25.4) (end 342.9 77.47)
     (stroke (width 0) (type default))
     (fill (type none))
     (uuid 223fe52d-9176-4279-bab0-7337a88c7d43)
@@ -2463,7 +2454,7 @@
     (pin "2" (uuid 6c375b80-3a36-49f4-a413-8aa1f1c3458c))
     (pin "1" (uuid 68b1fc47-7870-4aa1-8168-78c1cd2692d5))
     (instances
-      (project "TestPCB"
+      (project "TestPCB_Small"
         (path "/73749bb0-2e05-45df-aa13-5ff868818dbe"
           (reference "SSD2") (unit 1)
         )
@@ -2494,7 +2485,7 @@
     (pin "2" (uuid d4774103-9895-4847-871a-b2a441d556d5))
     (pin "1" (uuid 08503b55-19db-4840-9c36-6aa571075cf8))
     (instances
-      (project "TestPCB"
+      (project "TestPCB_Small"
         (path "/73749bb0-2e05-45df-aa13-5ff868818dbe"
           (reference "C16") (unit 1)
         )
@@ -2507,26 +2498,26 @@
     )
   )
 
-  (symbol (lib_id "Connector:TestPoint") (at 355.6 52.07 270) (unit 1)
+  (symbol (lib_id "Connector:TestPoint") (at 299.72 119.38 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
-    (uuid 06320672-ceda-431e-89b8-3ede5121ebee)
-    (property "Reference" "TP7" (at 360.172 54.61 0)
+    (uuid 0bc980f4-5907-4b6d-b107-2bf1bbbf5c50)
+    (property "Reference" "TP39" (at 302.26 114.808 0)
       (effects (font (size 1.27 1.27)) (justify left) hide)
     )
-    (property "Value" "+3.3V" (at 363.22 52.07 90)
+    (property "Value" "+3.3V" (at 299.72 113.03 0)
       (effects (font (size 1.27 1.27)))
     )
-    (property "Footprint" "TestPoint:TestPoint_Pad_2.0x2.0mm" (at 355.6 57.15 0)
+    (property "Footprint" "TestPoint:TestPoint_Pad_2.0x2.0mm" (at 304.8 119.38 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (property "Datasheet" "~" (at 355.6 57.15 0)
+    (property "Datasheet" "~" (at 304.8 119.38 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (pin "1" (uuid fbe17aa6-2f84-451c-8025-409f623dd5fc))
+    (pin "1" (uuid cf340d40-ade7-4b52-9c16-65f7ac9c9e53))
     (instances
-      (project "TestPCB"
+      (project "TestPCB_Small"
         (path "/73749bb0-2e05-45df-aa13-5ff868818dbe"
-          (reference "TP7") (unit 1)
+          (reference "TP39") (unit 1)
         )
       )
     )
@@ -2549,7 +2540,7 @@
     )
     (pin "1" (uuid 0077b44f-b387-492f-aca1-77acf6892d96))
     (instances
-      (project "TestPCB"
+      (project "TestPCB_Small"
         (path "/73749bb0-2e05-45df-aa13-5ff868818dbe"
           (reference "TP28") (unit 1)
         )
@@ -2557,25 +2548,25 @@
     )
   )
 
-  (symbol (lib_id "Device:R") (at 340.36 62.23 90) (unit 1)
+  (symbol (lib_id "Device:R") (at 368.3 123.19 180) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 0d3598cd-a75c-463a-a1c0-2e8669dd6d4a)
-    (property "Reference" "R12" (at 340.36 55.88 90)
-      (effects (font (size 1.27 1.27)))
+    (property "Reference" "R12" (at 370.84 121.92 0)
+      (effects (font (size 1.27 1.27)) (justify right))
     )
-    (property "Value" "10kΩ" (at 340.36 58.42 90)
-      (effects (font (size 1.27 1.27)))
+    (property "Value" "10kΩ" (at 370.84 124.46 0)
+      (effects (font (size 1.27 1.27)) (justify right))
     )
-    (property "Footprint" "Resistor_SMD:R_0805_2012Metric" (at 340.36 64.008 90)
+    (property "Footprint" "Resistor_SMD:R_0805_2012Metric" (at 370.078 123.19 90)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (property "Datasheet" "~" (at 340.36 62.23 0)
+    (property "Datasheet" "~" (at 368.3 123.19 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (pin "1" (uuid dd57366b-0943-4a13-82a0-6cf1e5116c5f))
     (pin "2" (uuid 77ede67e-83a2-4bcf-8a5d-25b22dfb175e))
     (instances
-      (project "TestPCB"
+      (project "TestPCB_Small"
         (path "/73749bb0-2e05-45df-aa13-5ff868818dbe"
           (reference "R12") (unit 1)
         )
@@ -2605,7 +2596,7 @@
     )
     (pin "1" (uuid 1cd7298c-b479-489a-a0f5-2723515ab23a))
     (instances
-      (project "TestPCB"
+      (project "TestPCB_Small"
         (path "/73749bb0-2e05-45df-aa13-5ff868818dbe"
           (reference "TP27") (unit 1)
         )
@@ -2630,7 +2621,7 @@
     )
     (pin "1" (uuid ceda79da-3efe-44a5-8044-a1be3086c2af))
     (instances
-      (project "TestPCB"
+      (project "TestPCB_Small"
         (path "/73749bb0-2e05-45df-aa13-5ff868818dbe"
           (reference "TP12") (unit 1)
         )
@@ -2655,7 +2646,7 @@
     )
     (pin "1" (uuid e4dce7b6-edfc-41a4-880d-b204916447c9))
     (instances
-      (project "TestPCB"
+      (project "TestPCB_Small"
         (path "/73749bb0-2e05-45df-aa13-5ff868818dbe"
           (reference "TP22") (unit 1)
         )
@@ -2680,7 +2671,7 @@
     )
     (pin "1" (uuid 76952d67-522a-4872-aa1c-b1b2f9e6f0f5))
     (instances
-      (project "TestPCB"
+      (project "TestPCB_Small"
         (path "/73749bb0-2e05-45df-aa13-5ff868818dbe"
           (reference "TP30") (unit 1)
         )
@@ -2706,7 +2697,7 @@
     (pin "2" (uuid 9739e881-c04b-45eb-9d7f-323f1ae77fa2))
     (pin "1" (uuid 1c0deb26-4a19-4c98-b6c3-8b39abc31414))
     (instances
-      (project "TestPCB"
+      (project "TestPCB_Small"
         (path "/73749bb0-2e05-45df-aa13-5ff868818dbe"
           (reference "C18") (unit 1)
         )
@@ -2719,25 +2710,25 @@
     )
   )
 
-  (symbol (lib_id "Device:C") (at 330.2 49.53 0) (unit 1)
+  (symbol (lib_id "Device:C") (at 368.3 158.75 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 174a0c2e-1971-453c-a152-fda70820dbde)
-    (property "Reference" "C10" (at 334.01 48.26 0)
+    (property "Reference" "C10" (at 372.11 157.48 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
-    (property "Value" "0.1µF" (at 334.01 50.8 0)
+    (property "Value" "0.1µF" (at 372.11 160.02 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
-    (property "Footprint" "Capacitor_SMD:C_0805_2012Metric" (at 331.1652 53.34 0)
+    (property "Footprint" "Capacitor_SMD:C_0805_2012Metric" (at 369.2652 162.56 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (property "Datasheet" "~" (at 330.2 49.53 0)
+    (property "Datasheet" "~" (at 368.3 158.75 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (pin "1" (uuid 95b1c8ee-8ea3-4321-a166-4833a5a18f66))
     (pin "2" (uuid 14c454e3-41d3-497a-a409-77c134da7e6a))
     (instances
-      (project "TestPCB"
+      (project "TestPCB_Small"
         (path "/73749bb0-2e05-45df-aa13-5ff868818dbe"
           (reference "C10") (unit 1)
         )
@@ -2768,7 +2759,7 @@
     (pin "1" (uuid 04e4507d-0d22-47b0-867c-a16af6bb408e))
     (pin "2" (uuid 0b03cb40-e7dc-4d12-afd7-dac1cad0749d))
     (instances
-      (project "TestPCB"
+      (project "TestPCB_Small"
         (path "/73749bb0-2e05-45df-aa13-5ff868818dbe"
           (reference "R7") (unit 1)
         )
@@ -2798,7 +2789,7 @@
     )
     (pin "1" (uuid e9e9290d-5907-424b-b35d-b1d28fa574cd))
     (instances
-      (project "TestPCB"
+      (project "TestPCB_Small"
         (path "/73749bb0-2e05-45df-aa13-5ff868818dbe"
           (reference "TP3") (unit 1)
         )
@@ -2826,7 +2817,7 @@
     (pin "1" (uuid d5b9a61e-32fb-42b1-b890-e54902b4f0a8))
     (pin "3" (uuid 741d36dd-44eb-4548-bfce-ed3c259c669d))
     (instances
-      (project "TestPCB"
+      (project "TestPCB_Small"
         (path "/73749bb0-2e05-45df-aa13-5ff868818dbe"
           (reference "D15") (unit 1)
         )
@@ -2839,26 +2830,51 @@
     )
   )
 
-  (symbol (lib_id "Connector:TestPoint") (at 342.9 36.83 270) (unit 1)
+  (symbol (lib_id "Connector:TestPoint") (at 323.85 33.02 270) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 1d31cef5-868a-4c7f-930b-aa9b5b9c282c)
-    (property "Reference" "TP17" (at 347.98 35.56 90)
+    (property "Reference" "TP17" (at 328.93 31.75 90)
       (effects (font (size 1.27 1.27)) (justify left) hide)
     )
-    (property "Value" "FL_RST" (at 347.98 36.83 90)
+    (property "Value" "FL_RST" (at 328.93 33.02 90)
       (effects (font (size 1.27 1.27)) (justify left))
     )
-    (property "Footprint" "TestPoint:TestPoint_Pad_2.0x2.0mm" (at 342.9 41.91 0)
+    (property "Footprint" "TestPoint:TestPoint_Pad_2.0x2.0mm" (at 323.85 38.1 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (property "Datasheet" "~" (at 342.9 41.91 0)
+    (property "Datasheet" "~" (at 323.85 38.1 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (pin "1" (uuid 21146f29-447b-4992-914b-a92ffa8a994b))
     (instances
-      (project "TestPCB"
+      (project "TestPCB_Small"
         (path "/73749bb0-2e05-45df-aa13-5ff868818dbe"
           (reference "TP17") (unit 1)
+        )
+      )
+    )
+  )
+
+  (symbol (lib_id "Connector:TestPoint") (at 279.4 48.26 270) (mirror x) (unit 1)
+    (in_bom yes) (on_board yes) (dnp no)
+    (uuid 21810ef1-ac4f-4570-8226-0109e4d5f449)
+    (property "Reference" "TP13" (at 284.48 49.53 90)
+      (effects (font (size 1.27 1.27)) (justify left) hide)
+    )
+    (property "Value" "FL_GND" (at 284.48 48.26 90)
+      (effects (font (size 1.27 1.27)) (justify left))
+    )
+    (property "Footprint" "TestPoint:TestPoint_Pad_2.0x2.0mm" (at 279.4 43.18 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Datasheet" "~" (at 279.4 43.18 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (pin "1" (uuid f15259e8-72c3-4bc3-bf73-b81ee762ef33))
+    (instances
+      (project "TestPCB_Small"
+        (path "/73749bb0-2e05-45df-aa13-5ff868818dbe"
+          (reference "TP13") (unit 1)
         )
       )
     )
@@ -2899,7 +2915,7 @@
     (pin "3" (uuid 7ba49a1c-f246-4dc4-9593-f87cf5855cf4))
     (pin "1" (uuid 00a4c7a6-cec1-416f-addf-bf76933a531e))
     (instances
-      (project "TestPCB"
+      (project "TestPCB_Small"
         (path "/73749bb0-2e05-45df-aa13-5ff868818dbe"
           (reference "S1") (unit 1)
         )
@@ -2924,7 +2940,7 @@
     )
     (pin "1" (uuid 020e162a-627a-4428-a814-b4c7d9e144b2))
     (instances
-      (project "TestPCB"
+      (project "TestPCB_Small"
         (path "/73749bb0-2e05-45df-aa13-5ff868818dbe"
           (reference "TP38") (unit 1)
         )
@@ -2950,7 +2966,7 @@
     (pin "2" (uuid 161f69c6-c241-4b5f-bdaf-238755845f38))
     (pin "1" (uuid 948138f5-9ff7-478a-bc6d-a733d6fc078e))
     (instances
-      (project "TestPCB"
+      (project "TestPCB_Small"
         (path "/73749bb0-2e05-45df-aa13-5ff868818dbe"
           (reference "C15") (unit 1)
         )
@@ -2981,7 +2997,7 @@
     (pin "2" (uuid 7f0d2196-98ea-4717-b619-7064de76f6e5))
     (pin "1" (uuid 30b470e0-c48b-48c0-b2c2-f3683aa02879))
     (instances
-      (project "TestPCB"
+      (project "TestPCB_Small"
         (path "/73749bb0-2e05-45df-aa13-5ff868818dbe"
           (reference "C19") (unit 1)
         )
@@ -3011,7 +3027,7 @@
     )
     (pin "1" (uuid eb4121bd-8765-408f-90c7-4109a006abfd))
     (instances
-      (project "TestPCB"
+      (project "TestPCB_Small"
         (path "/73749bb0-2e05-45df-aa13-5ff868818dbe"
           (reference "TP18") (unit 1)
         )
@@ -3042,7 +3058,7 @@
           (reference "C4") (unit 1)
         )
       )
-      (project "TestPCB"
+      (project "TestPCB_Small"
         (path "/73749bb0-2e05-45df-aa13-5ff868818dbe"
           (reference "C6") (unit 1)
         )
@@ -3107,7 +3123,7 @@
     (pin "38" (uuid 9ee875df-5412-4a2b-beb5-4a5b74ad1c93))
     (pin "12" (uuid a875e90b-277a-489b-a69d-ee9ed04bff4f))
     (instances
-      (project "TestPCB"
+      (project "TestPCB_Small"
         (path "/73749bb0-2e05-45df-aa13-5ff868818dbe"
           (reference "U1") (unit 1)
         )
@@ -3132,7 +3148,7 @@
     )
     (pin "1" (uuid 7b63add6-5abf-4a68-b6fe-a20293550da9))
     (instances
-      (project "TestPCB"
+      (project "TestPCB_Small"
         (path "/73749bb0-2e05-45df-aa13-5ff868818dbe"
           (reference "TP35") (unit 1)
         )
@@ -3158,7 +3174,7 @@
     (pin "1" (uuid e82fc4aa-5da3-4786-99cb-e6274d1547f3))
     (pin "2" (uuid e85f4ec0-6e4f-4635-be2c-a62892a11826))
     (instances
-      (project "TestPCB"
+      (project "TestPCB_Small"
         (path "/73749bb0-2e05-45df-aa13-5ff868818dbe"
           (reference "R1") (unit 1)
         )
@@ -3189,7 +3205,7 @@
     (pin "1" (uuid bd0c835d-c79c-4c96-96f3-be7918ae89be))
     (pin "2" (uuid 00e28438-aab1-4654-9f89-4836a533566a))
     (instances
-      (project "TestPCB"
+      (project "TestPCB_Small"
         (path "/73749bb0-2e05-45df-aa13-5ff868818dbe"
           (reference "R3") (unit 1)
         )
@@ -3225,7 +3241,7 @@
           (reference "C5") (unit 1)
         )
       )
-      (project "TestPCB"
+      (project "TestPCB_Small"
         (path "/73749bb0-2e05-45df-aa13-5ff868818dbe"
           (reference "C5") (unit 1)
         )
@@ -3233,24 +3249,24 @@
     )
   )
 
-  (symbol (lib_id "Connector:TestPoint") (at 259.08 129.54 90) (unit 1)
+  (symbol (lib_id "Connector:TestPoint") (at 254 129.54 90) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 4a4b5ad4-105a-4512-9404-5ff91fafcb08)
-    (property "Reference" "TP5" (at 252.73 132.08 90)
+    (property "Reference" "TP5" (at 247.65 132.08 90)
       (effects (font (size 1.27 1.27)) (justify left))
     )
-    (property "Value" "FL_EN" (at 254 129.54 90)
+    (property "Value" "FL_EN" (at 248.92 129.54 90)
       (effects (font (size 1.27 1.27)) (justify left))
     )
-    (property "Footprint" "TestPoint:TestPoint_Pad_2.0x2.0mm" (at 259.08 124.46 0)
+    (property "Footprint" "TestPoint:TestPoint_Pad_2.0x2.0mm" (at 254 124.46 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (property "Datasheet" "~" (at 259.08 124.46 0)
+    (property "Datasheet" "~" (at 254 124.46 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (pin "1" (uuid a561a8e9-87f5-4926-8165-08b816349eb8))
     (instances
-      (project "TestPCB"
+      (project "TestPCB_Small"
         (path "/73749bb0-2e05-45df-aa13-5ff868818dbe"
           (reference "TP5") (unit 1)
         )
@@ -3281,7 +3297,7 @@
           (reference "C2") (unit 1)
         )
       )
-      (project "TestPCB"
+      (project "TestPCB_Small"
         (path "/73749bb0-2e05-45df-aa13-5ff868818dbe"
           (reference "C4") (unit 1)
         )
@@ -3307,7 +3323,7 @@
     (pin "1" (uuid 570e22a2-70bd-42a0-ae04-95ea6d46a63b))
     (pin "2" (uuid 983e1bb5-ffc4-4119-9c8b-a316e79a16a8))
     (instances
-      (project "TestPCB"
+      (project "TestPCB_Small"
         (path "/73749bb0-2e05-45df-aa13-5ff868818dbe"
           (reference "C2") (unit 1)
         )
@@ -3337,7 +3353,7 @@
     )
     (pin "1" (uuid 935aa5f0-c9aa-4f53-b32d-f684a62f9cd6))
     (instances
-      (project "TestPCB"
+      (project "TestPCB_Small"
         (path "/73749bb0-2e05-45df-aa13-5ff868818dbe"
           (reference "TP24") (unit 1)
         )
@@ -3362,7 +3378,7 @@
     )
     (pin "1" (uuid da14c6cc-8a63-4bb0-a67a-7fdb03c49618))
     (instances
-      (project "TestPCB"
+      (project "TestPCB_Small"
         (path "/73749bb0-2e05-45df-aa13-5ff868818dbe"
           (reference "TP29") (unit 1)
         )
@@ -3387,7 +3403,7 @@
     )
     (pin "1" (uuid 88b18f5b-fe7c-415e-b68e-148a46c63281))
     (instances
-      (project "TestPCB"
+      (project "TestPCB_Small"
         (path "/73749bb0-2e05-45df-aa13-5ff868818dbe"
           (reference "TP25") (unit 1)
         )
@@ -3418,7 +3434,7 @@
           (reference "C1") (unit 1)
         )
       )
-      (project "TestPCB"
+      (project "TestPCB_Small"
         (path "/73749bb0-2e05-45df-aa13-5ff868818dbe"
           (reference "C3") (unit 1)
         )
@@ -3444,7 +3460,7 @@
     (pin "1" (uuid 81fd004d-b02b-46c5-a116-00ebe4ff3b36))
     (pin "2" (uuid 7aa679a2-93f3-47ce-8da8-264322647cff))
     (instances
-      (project "TestPCB"
+      (project "TestPCB_Small"
         (path "/73749bb0-2e05-45df-aa13-5ff868818dbe"
           (reference "R9") (unit 1)
         )
@@ -3475,7 +3491,7 @@
     (pin "1" (uuid a582d156-a835-48ed-bb85-e077f8e3e07f))
     (pin "2" (uuid f6670086-3d98-448e-9353-ee1f3b6acaac))
     (instances
-      (project "TestPCB"
+      (project "TestPCB_Small"
         (path "/73749bb0-2e05-45df-aa13-5ff868818dbe"
           (reference "R10") (unit 1)
         )
@@ -3505,9 +3521,65 @@
     )
     (pin "1" (uuid 4167555b-3cc0-4462-b522-b553301e24e2))
     (instances
-      (project "TestPCB"
+      (project "TestPCB_Small"
         (path "/73749bb0-2e05-45df-aa13-5ff868818dbe"
           (reference "TP16") (unit 1)
+        )
+      )
+    )
+  )
+
+  (symbol (lib_id "Device:C") (at 246.38 162.56 0) (unit 1)
+    (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
+    (uuid 77cbb2e3-7980-49f0-9e12-5939eb72309a)
+    (property "Reference" "C8" (at 250.19 161.29 0)
+      (effects (font (size 1.27 1.27)) (justify left))
+    )
+    (property "Value" "0.1µF" (at 250.19 163.83 0)
+      (effects (font (size 1.27 1.27)) (justify left))
+    )
+    (property "Footprint" "Capacitor_SMD:C_0805_2012Metric" (at 247.3452 166.37 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Datasheet" "~" (at 246.38 162.56 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (pin "1" (uuid fd053dbf-cf8a-467e-8508-ba90ff107de4))
+    (pin "2" (uuid c3fadb58-942f-4adc-9a58-f11054ec439e))
+    (instances
+      (project "TestPCB_Small"
+        (path "/73749bb0-2e05-45df-aa13-5ff868818dbe"
+          (reference "C8") (unit 1)
+        )
+      )
+      (project "FlashSchaltung"
+        (path "/a6dd8909-6165-490d-931d-867074ab59ad"
+          (reference "C2") (unit 1)
+        )
+      )
+    )
+  )
+
+  (symbol (lib_id "Connector:TestPoint") (at 317.5 210.82 180) (unit 1)
+    (in_bom yes) (on_board yes) (dnp no)
+    (uuid 7f95d9ac-c923-4031-a850-fce0c4ec0930)
+    (property "Reference" "TP7" (at 320.04 212.852 0)
+      (effects (font (size 1.27 1.27)) (justify right) hide)
+    )
+    (property "Value" "FL_GND" (at 317.5 217.17 0)
+      (effects (font (size 1.27 1.27)))
+    )
+    (property "Footprint" "TestPoint:TestPoint_Pad_2.0x2.0mm" (at 312.42 210.82 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Datasheet" "~" (at 312.42 210.82 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (pin "1" (uuid cabc3035-77fb-499a-818e-8811ae29ee29))
+    (instances
+      (project "TestPCB_Small"
+        (path "/73749bb0-2e05-45df-aa13-5ff868818dbe"
+          (reference "TP7") (unit 1)
         )
       )
     )
@@ -3530,7 +3602,7 @@
     )
     (pin "1" (uuid 9bbe314c-045a-4f74-8fbf-c6a7e814467c))
     (instances
-      (project "TestPCB"
+      (project "TestPCB_Small"
         (path "/73749bb0-2e05-45df-aa13-5ff868818dbe"
           (reference "TP20") (unit 1)
         )
@@ -3538,25 +3610,25 @@
     )
   )
 
-  (symbol (lib_id "Device:R") (at 340.36 43.18 90) (unit 1)
+  (symbol (lib_id "Device:R") (at 259.08 124.46 180) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 81bd3389-8295-43d1-9e16-0aef4990c3b4)
-    (property "Reference" "R11" (at 340.36 36.83 90)
-      (effects (font (size 1.27 1.27)))
+    (property "Reference" "R11" (at 261.62 123.19 0)
+      (effects (font (size 1.27 1.27)) (justify right))
     )
-    (property "Value" "10kΩ" (at 340.36 39.37 90)
-      (effects (font (size 1.27 1.27)))
+    (property "Value" "10kΩ" (at 261.62 125.73 0)
+      (effects (font (size 1.27 1.27)) (justify right))
     )
-    (property "Footprint" "Resistor_SMD:R_0805_2012Metric" (at 340.36 44.958 90)
+    (property "Footprint" "Resistor_SMD:R_0805_2012Metric" (at 260.858 124.46 90)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (property "Datasheet" "~" (at 340.36 43.18 0)
+    (property "Datasheet" "~" (at 259.08 124.46 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (pin "1" (uuid ddca432f-f1d5-4b8e-b85a-5a11a50468d4))
     (pin "2" (uuid ff355e3b-baf5-42e5-94d1-59464a8a18af))
     (instances
-      (project "TestPCB"
+      (project "TestPCB_Small"
         (path "/73749bb0-2e05-45df-aa13-5ff868818dbe"
           (reference "R11") (unit 1)
         )
@@ -3586,7 +3658,7 @@
     )
     (pin "1" (uuid 7a9d1871-9b0f-4ecc-a17c-baecf8c315ae))
     (instances
-      (project "TestPCB"
+      (project "TestPCB_Small"
         (path "/73749bb0-2e05-45df-aa13-5ff868818dbe"
           (reference "TP1") (unit 1)
         )
@@ -3631,7 +3703,7 @@
     (pin "3" (uuid 4a85abbc-7347-4479-bfc2-c2b309f6ea4e))
     (pin "4" (uuid a4be4bc8-6290-4c0c-b867-e0fae9286897))
     (instances
-      (project "TestPCB"
+      (project "TestPCB_Small"
         (path "/73749bb0-2e05-45df-aa13-5ff868818dbe"
           (reference "S2") (unit 1)
         )
@@ -3656,7 +3728,7 @@
     )
     (pin "1" (uuid dfed3e9a-d239-4f79-bebc-6e83e60127c3))
     (instances
-      (project "TestPCB"
+      (project "TestPCB_Small"
         (path "/73749bb0-2e05-45df-aa13-5ff868818dbe"
           (reference "TP9") (unit 1)
         )
@@ -3681,7 +3753,7 @@
     )
     (pin "1" (uuid 42f1f3f7-95f8-4adf-b8cd-2175d4414ffd))
     (instances
-      (project "TestPCB"
+      (project "TestPCB_Small"
         (path "/73749bb0-2e05-45df-aa13-5ff868818dbe"
           (reference "TP23") (unit 1)
         )
@@ -3712,7 +3784,7 @@
           (reference "C3") (unit 1)
         )
       )
-      (project "TestPCB"
+      (project "TestPCB_Small"
         (path "/73749bb0-2e05-45df-aa13-5ff868818dbe"
           (reference "C7") (unit 1)
         )
@@ -3740,7 +3812,7 @@
     (pin "1" (uuid 34896b2b-96e6-4430-923a-0b89e1d7a2e9))
     (pin "3" (uuid 1160ec35-d95b-493a-b5ed-1b36e8c1b3ed))
     (instances
-      (project "TestPCB"
+      (project "TestPCB_Small"
         (path "/73749bb0-2e05-45df-aa13-5ff868818dbe"
           (reference "D10") (unit 1)
         )
@@ -3776,7 +3848,7 @@
           (reference "R2") (unit 1)
         )
       )
-      (project "TestPCB"
+      (project "TestPCB_Small"
         (path "/73749bb0-2e05-45df-aa13-5ff868818dbe"
           (reference "R5") (unit 1)
         )
@@ -3801,7 +3873,7 @@
     )
     (pin "1" (uuid 10a685e8-071d-4057-a659-3d8b53dd56e8))
     (instances
-      (project "TestPCB"
+      (project "TestPCB_Small"
         (path "/73749bb0-2e05-45df-aa13-5ff868818dbe"
           (reference "TP8") (unit 1)
         )
@@ -3832,7 +3904,7 @@
           (reference "R1") (unit 1)
         )
       )
-      (project "TestPCB"
+      (project "TestPCB_Small"
         (path "/73749bb0-2e05-45df-aa13-5ff868818dbe"
           (reference "R6") (unit 1)
         )
@@ -3840,25 +3912,25 @@
     )
   )
 
-  (symbol (lib_id "Device:C") (at 336.55 66.04 0) (unit 1)
-    (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
+  (symbol (lib_id "Device:C") (at 259.08 170.18 0) (mirror y) (unit 1)
+    (in_bom yes) (on_board yes) (dnp no)
     (uuid 9a0eedae-c25b-4cd0-aae5-919a8f05a526)
-    (property "Reference" "C11" (at 340.36 64.77 0)
+    (property "Reference" "C11" (at 255.27 168.91 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
-    (property "Value" "470nF" (at 340.36 67.31 0)
+    (property "Value" "470nF" (at 255.27 171.45 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
-    (property "Footprint" "Capacitor_SMD:C_0805_2012Metric" (at 337.5152 69.85 0)
+    (property "Footprint" "Capacitor_SMD:C_0805_2012Metric" (at 258.1148 173.99 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (property "Datasheet" "~" (at 336.55 66.04 0)
+    (property "Datasheet" "~" (at 259.08 170.18 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (pin "1" (uuid 8cac3a33-cf1e-4d92-87b8-21d78016b11e))
     (pin "2" (uuid 4a39dde4-80da-46be-b891-4b2112f8b6f6))
     (instances
-      (project "TestPCB"
+      (project "TestPCB_Small"
         (path "/73749bb0-2e05-45df-aa13-5ff868818dbe"
           (reference "C11") (unit 1)
         )
@@ -3891,7 +3963,7 @@
     (pin "1" (uuid 48ddd9dd-49d9-4370-ad09-e591c57063ea))
     (pin "3" (uuid e677d1c7-cbcd-441c-a6d9-0c78423ffdc0))
     (instances
-      (project "TestPCB"
+      (project "TestPCB_Small"
         (path "/73749bb0-2e05-45df-aa13-5ff868818dbe"
           (reference "D13") (unit 1)
         )
@@ -3934,7 +4006,7 @@
     (pin "2" (uuid 7febe0bb-575e-4df1-84ff-7bb4bc6f53e8))
     (pin "10" (uuid 30e6cece-5b7f-405c-b6e8-094131a0bae8))
     (instances
-      (project "TestPCB"
+      (project "TestPCB_Small"
         (path "/73749bb0-2e05-45df-aa13-5ff868818dbe"
           (reference "U4") (unit 1)
         )
@@ -3976,7 +4048,7 @@
     (pin "1" (uuid bf93b36b-1885-40d5-8b7f-2b3e47957e8a))
     (pin "3" (uuid a1e79151-297b-436e-836d-ffb46a9961f8))
     (instances
-      (project "TestPCB"
+      (project "TestPCB_Small"
         (path "/73749bb0-2e05-45df-aa13-5ff868818dbe"
           (reference "Q2") (unit 1)
         )
@@ -4001,7 +4073,7 @@
     )
     (pin "1" (uuid 474c5a05-8d9a-4833-958b-2f58b34761c0))
     (instances
-      (project "TestPCB"
+      (project "TestPCB_Small"
         (path "/73749bb0-2e05-45df-aa13-5ff868818dbe"
           (reference "TP32") (unit 1)
         )
@@ -4030,7 +4102,7 @@
     (pin "3" (uuid 2351123f-fcc2-4094-851a-e95a79e6762a))
     (pin "2" (uuid 1948fdf8-a989-40d5-9491-23086dd7eee5))
     (instances
-      (project "TestPCB"
+      (project "TestPCB_Small"
         (path "/73749bb0-2e05-45df-aa13-5ff868818dbe"
           (reference "U2") (unit 1)
         )
@@ -4056,7 +4128,7 @@
     (pin "1" (uuid 3b4f7dc7-0ec6-416b-aa4d-7ff3794bdc28))
     (pin "2" (uuid 4400f2d5-14fe-461f-a7e4-d9f249787b96))
     (instances
-      (project "TestPCB"
+      (project "TestPCB_Small"
         (path "/73749bb0-2e05-45df-aa13-5ff868818dbe"
           (reference "R_Photo2") (unit 1)
         )
@@ -4086,7 +4158,7 @@
     )
     (pin "1" (uuid 29d4a306-e6f0-4601-9424-85e818341a74))
     (instances
-      (project "TestPCB"
+      (project "TestPCB_Small"
         (path "/73749bb0-2e05-45df-aa13-5ff868818dbe"
           (reference "TP33") (unit 1)
         )
@@ -4111,7 +4183,7 @@
     )
     (pin "1" (uuid 37781030-f27b-493d-ba1b-f17dc0c374d9))
     (instances
-      (project "TestPCB"
+      (project "TestPCB_Small"
         (path "/73749bb0-2e05-45df-aa13-5ff868818dbe"
           (reference "TP31") (unit 1)
         )
@@ -4137,7 +4209,7 @@
     (pin "2" (uuid 72d22ba9-aced-435f-9cc0-ee958728ce98))
     (pin "1" (uuid c2587019-a51d-4e0b-b62d-42354c52c4e4))
     (instances
-      (project "TestPCB"
+      (project "TestPCB_Small"
         (path "/73749bb0-2e05-45df-aa13-5ff868818dbe"
           (reference "C17") (unit 1)
         )
@@ -4170,7 +4242,7 @@
     (pin "1" (uuid 31de81ef-04c0-4801-af3c-acb268760107))
     (pin "3" (uuid 74a38b7f-61ba-4aed-87a6-6ebbe734e75c))
     (instances
-      (project "TestPCB"
+      (project "TestPCB_Small"
         (path "/73749bb0-2e05-45df-aa13-5ff868818dbe"
           (reference "D11") (unit 1)
         )
@@ -4200,7 +4272,7 @@
     )
     (pin "1" (uuid 41ec3e9e-bfad-486d-8846-c18782fbac07))
     (instances
-      (project "TestPCB"
+      (project "TestPCB_Small"
         (path "/73749bb0-2e05-45df-aa13-5ff868818dbe"
           (reference "TP10") (unit 1)
         )
@@ -4225,7 +4297,7 @@
     )
     (pin "1" (uuid d2dc50a8-8aba-43bc-ba8e-1f9fb8cdfa45))
     (instances
-      (project "TestPCB"
+      (project "TestPCB_Small"
         (path "/73749bb0-2e05-45df-aa13-5ff868818dbe"
           (reference "TP2") (unit 1)
         )
@@ -4250,7 +4322,7 @@
     )
     (pin "1" (uuid 76981531-b3ec-41be-af97-b60fd750c165))
     (instances
-      (project "TestPCB"
+      (project "TestPCB_Small"
         (path "/73749bb0-2e05-45df-aa13-5ff868818dbe"
           (reference "TP15") (unit 1)
         )
@@ -4299,34 +4371,9 @@
     (pin "B5" (uuid e223d040-7ad7-4f51-af02-183dc9f873d2))
     (pin "A12" (uuid 82a14d87-4874-4b41-81e2-3b7e8f8582b6))
     (instances
-      (project "TestPCB"
+      (project "TestPCB_Small"
         (path "/73749bb0-2e05-45df-aa13-5ff868818dbe"
           (reference "J2") (unit 1)
-        )
-      )
-    )
-  )
-
-  (symbol (lib_id "Connector:TestPoint") (at 279.4 54.61 180) (unit 1)
-    (in_bom yes) (on_board yes) (dnp no)
-    (uuid c9affd76-429d-4e7e-8984-0509cf91f508)
-    (property "Reference" "TP13" (at 281.94 56.642 0)
-      (effects (font (size 1.27 1.27)) (justify right) hide)
-    )
-    (property "Value" "GND" (at 279.4 60.96 0)
-      (effects (font (size 1.27 1.27)))
-    )
-    (property "Footprint" "TestPoint:TestPoint_Pad_2.0x2.0mm" (at 274.32 54.61 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Datasheet" "~" (at 274.32 54.61 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (pin "1" (uuid 02ba83ac-3b5f-40b5-b658-7a621abd2257))
-    (instances
-      (project "TestPCB"
-        (path "/73749bb0-2e05-45df-aa13-5ff868818dbe"
-          (reference "TP13") (unit 1)
         )
       )
     )
@@ -4365,7 +4412,7 @@
     (pin "1" (uuid 5c13fd58-571d-4a20-baaa-1229cdd09592))
     (pin "2" (uuid 953b3a2f-869a-488e-a3f4-e62c858a58ae))
     (instances
-      (project "TestPCB"
+      (project "TestPCB_Small"
         (path "/73749bb0-2e05-45df-aa13-5ff868818dbe"
           (reference "Q1") (unit 1)
         )
@@ -4373,24 +4420,24 @@
     )
   )
 
-  (symbol (lib_id "Connector:TestPoint") (at 360.68 144.78 270) (unit 1)
+  (symbol (lib_id "Connector:TestPoint") (at 368.3 144.78 270) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid d4920327-a572-47ec-8552-91668fffaf3d)
-    (property "Reference" "TP4" (at 365.76 143.51 90)
+    (property "Reference" "TP4" (at 373.38 143.51 90)
       (effects (font (size 1.27 1.27)) (justify left) hide)
     )
-    (property "Value" "FL_RST" (at 365.76 144.78 90)
+    (property "Value" "FL_RST" (at 373.38 144.78 90)
       (effects (font (size 1.27 1.27)) (justify left))
     )
-    (property "Footprint" "TestPoint:TestPoint_Pad_2.0x2.0mm" (at 360.68 149.86 0)
+    (property "Footprint" "TestPoint:TestPoint_Pad_2.0x2.0mm" (at 368.3 149.86 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (property "Datasheet" "~" (at 360.68 149.86 0)
+    (property "Datasheet" "~" (at 368.3 149.86 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (pin "1" (uuid bafb16cb-2aee-4f9a-ab5b-45922fcdf686))
     (instances
-      (project "TestPCB"
+      (project "TestPCB_Small"
         (path "/73749bb0-2e05-45df-aa13-5ff868818dbe"
           (reference "TP4") (unit 1)
         )
@@ -4418,7 +4465,7 @@
     (pin "1" (uuid 95f25074-efa7-403f-8118-8fb611204339))
     (pin "3" (uuid 7be92f14-e9a5-4389-9573-2214c97f0ebd))
     (instances
-      (project "TestPCB"
+      (project "TestPCB_Small"
         (path "/73749bb0-2e05-45df-aa13-5ff868818dbe"
           (reference "D14") (unit 1)
         )
@@ -4448,7 +4495,7 @@
     )
     (pin "1" (uuid a293e53d-7c58-4de6-b915-f1c8b468e7ba))
     (instances
-      (project "TestPCB"
+      (project "TestPCB_Small"
         (path "/73749bb0-2e05-45df-aa13-5ff868818dbe"
           (reference "TP37") (unit 1)
         )
@@ -4473,7 +4520,7 @@
     )
     (pin "1" (uuid e2075e6b-dc1a-4622-b1fb-8d6dbb276801))
     (instances
-      (project "TestPCB"
+      (project "TestPCB_Small"
         (path "/73749bb0-2e05-45df-aa13-5ff868818dbe"
           (reference "TP26") (unit 1)
         )
@@ -4498,7 +4545,7 @@
     )
     (pin "1" (uuid ed766e74-6a96-49f9-bec8-52562c4b8c49))
     (instances
-      (project "TestPCB"
+      (project "TestPCB_Small"
         (path "/73749bb0-2e05-45df-aa13-5ff868818dbe"
           (reference "TP19") (unit 1)
         )
@@ -4524,7 +4571,7 @@
     (pin "1" (uuid 450bc8d0-b856-4de8-8a6e-ae83aef233c7))
     (pin "2" (uuid 1fff4265-4f24-4fbf-82b6-13bbd6324a27))
     (instances
-      (project "TestPCB"
+      (project "TestPCB_Small"
         (path "/73749bb0-2e05-45df-aa13-5ff868818dbe"
           (reference "R2") (unit 1)
         )
@@ -4571,7 +4618,7 @@
     (pin "1" (uuid 8bb043fa-0c3e-47ee-81c4-eb4b73acfd61))
     (pin "3" (uuid 067d06f7-7c70-4a89-8fbd-0e3137c7f0dc))
     (instances
-      (project "TestPCB"
+      (project "TestPCB_Small"
         (path "/73749bb0-2e05-45df-aa13-5ff868818dbe"
           (reference "Q3") (unit 1)
         )
@@ -4605,7 +4652,7 @@
           (reference "U1") (unit 1)
         )
       )
-      (project "TestPCB"
+      (project "TestPCB_Small"
         (path "/73749bb0-2e05-45df-aa13-5ff868818dbe"
           (reference "U3") (unit 1)
         )
@@ -4630,7 +4677,7 @@
     )
     (pin "1" (uuid 0071b88e-a85f-4f4f-876e-b58fa4d0479f))
     (instances
-      (project "TestPCB"
+      (project "TestPCB_Small"
         (path "/73749bb0-2e05-45df-aa13-5ff868818dbe"
           (reference "TP11") (unit 1)
         )
@@ -4655,7 +4702,7 @@
     )
     (pin "1" (uuid 66872995-57fd-48fe-99b2-f5ff18766494))
     (instances
-      (project "TestPCB"
+      (project "TestPCB_Small"
         (path "/73749bb0-2e05-45df-aa13-5ff868818dbe"
           (reference "TP6") (unit 1)
         )
@@ -4680,7 +4727,7 @@
     )
     (pin "1" (uuid c871a429-0edf-47e0-83e8-6ec8d6859d33))
     (instances
-      (project "TestPCB"
+      (project "TestPCB_Small"
         (path "/73749bb0-2e05-45df-aa13-5ff868818dbe"
           (reference "TP21") (unit 1)
         )
@@ -4708,7 +4755,7 @@
     (pin "1" (uuid 44ca84ce-8326-4c80-8c7f-77e01135351e))
     (pin "3" (uuid 807ffd9c-5e6b-459c-b91d-d0cfa8b7330b))
     (instances
-      (project "TestPCB"
+      (project "TestPCB_Small"
         (path "/73749bb0-2e05-45df-aa13-5ff868818dbe"
           (reference "D12") (unit 1)
         )
@@ -4744,7 +4791,7 @@
           (reference "D1") (unit 1)
         )
       )
-      (project "TestPCB"
+      (project "TestPCB_Small"
         (path "/73749bb0-2e05-45df-aa13-5ff868818dbe"
           (reference "D1") (unit 1)
         )
@@ -4769,7 +4816,7 @@
     )
     (pin "1" (uuid d2ef3ae6-1672-47b8-9071-33fa989a805a))
     (instances
-      (project "TestPCB"
+      (project "TestPCB_Small"
         (path "/73749bb0-2e05-45df-aa13-5ff868818dbe"
           (reference "TP36") (unit 1)
         )
@@ -4794,7 +4841,7 @@
     )
     (pin "1" (uuid f870d12b-2fb3-4d1c-887e-edadd15740d2))
     (instances
-      (project "TestPCB"
+      (project "TestPCB_Small"
         (path "/73749bb0-2e05-45df-aa13-5ff868818dbe"
           (reference "TP34") (unit 1)
         )
@@ -4820,7 +4867,7 @@
     (pin "1" (uuid d3810cf1-2c9d-4810-8957-6f9197ab5b6d))
     (pin "2" (uuid 9d334f3b-d23c-4755-b21f-012c2749d6fc))
     (instances
-      (project "TestPCB"
+      (project "TestPCB_Small"
         (path "/73749bb0-2e05-45df-aa13-5ff868818dbe"
           (reference "C1") (unit 1)
         )
@@ -4833,24 +4880,24 @@
     )
   )
 
-  (symbol (lib_id "Connector:TestPoint") (at 342.9 55.88 270) (unit 1)
+  (symbol (lib_id "Connector:TestPoint") (at 323.85 52.07 270) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid ff4e40ea-652b-4709-8b6e-06376097cd6f)
-    (property "Reference" "TP14" (at 347.98 54.61 90)
+    (property "Reference" "TP14" (at 328.93 50.8 90)
       (effects (font (size 1.27 1.27)) (justify left) hide)
     )
-    (property "Value" "FL_EN" (at 347.98 55.88 90)
+    (property "Value" "FL_EN" (at 328.93 52.07 90)
       (effects (font (size 1.27 1.27)) (justify left))
     )
-    (property "Footprint" "TestPoint:TestPoint_Pad_2.0x2.0mm" (at 342.9 60.96 0)
+    (property "Footprint" "TestPoint:TestPoint_Pad_2.0x2.0mm" (at 323.85 57.15 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (property "Datasheet" "~" (at 342.9 60.96 0)
+    (property "Datasheet" "~" (at 323.85 57.15 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (pin "1" (uuid fab29aca-243d-4857-a55f-48313cae73ba))
     (instances
-      (project "TestPCB"
+      (project "TestPCB_Small"
         (path "/73749bb0-2e05-45df-aa13-5ff868818dbe"
           (reference "TP14") (unit 1)
         )
@@ -4876,7 +4923,7 @@
     (pin "2" (uuid 22ec8f26-da32-4403-a293-cada75cc7f57))
     (pin "1" (uuid ae51b97f-8b21-444c-8130-6df01aa90f05))
     (instances
-      (project "TestPCB"
+      (project "TestPCB_Small"
         (path "/73749bb0-2e05-45df-aa13-5ff868818dbe"
           (reference "C14") (unit 1)
         )
