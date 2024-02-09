@@ -645,6 +645,11 @@
       (net 75 "unconnected-(Button1-Pad3)") (pinfunction "3") (pintype "passive") (tstamp 77e62882-8421-4a7d-87f8-72e829fbd285))
     (pad "4" smd rect (at -2.05 -0.8) (size 0.9 1) (layers "F.Cu" "F.Paste" "F.Mask")
       (net 44 "Net-(Button1-Pad4)") (pinfunction "4") (pintype "passive") (tstamp ec9b0dde-d621-43a9-a29b-f2f30354938d))
+    (model "D:/_HDA/rapid-prototyping/KiCad/_Libraries/KMR631NGULCLFS/KMR631NGULCLFS.stp"
+      (offset (xyz 0 0 0))
+      (scale (xyz 1 1 1))
+      (rotate (xyz -90 0 0))
+    )
   )
 
   (footprint "2N7002:SOT96P240X120-3N" (layer "F.Cu")
@@ -2438,10 +2443,10 @@
       (net 20 "Net-(BM1-V_{BAT})") (pinfunction "Pin_2") (pintype "passive") (tstamp cf99b075-e78c-4adb-85f4-019d63672836))
     (pad "MP" smd roundrect (at -3.35 -2.9) (size 1.5 3.4) (layers "B.Cu" "B.Paste" "B.Mask") (roundrect_rratio 0.166667) (tstamp e278163c-e133-44e7-8ae7-18352c278c3f))
     (pad "MP" smd roundrect (at 3.35 -2.9) (size 1.5 3.4) (layers "B.Cu" "B.Paste" "B.Mask") (roundrect_rratio 0.166667) (tstamp 499951ee-8589-45f9-ba01-53798d22ee84))
-    (model "${KICAD6_3DMODEL_DIR}/Connector_JST.3dshapes/JST_PH_S2B-PH-SM4-TB_1x02-1MP_P2.00mm_Horizontal.wrl"
-      (offset (xyz 0 0 0))
+    (model "D:/_HDA/rapid-prototyping/KiCad/_Libraries/S2B-PH-SM4-TB.stp"
+      (offset (xyz 0 -4.5 0))
       (scale (xyz 1 1 1))
-      (rotate (xyz 0 0 0))
+      (rotate (xyz -90 0 0))
     )
   )
 
