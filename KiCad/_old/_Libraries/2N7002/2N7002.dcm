@@ -1,9 +1,0 @@
-EESchema-DOCLIB  Version 2.0
-#
-$CMP 2N7002
-D N-channel MOSFET,2N7002 0.115A 60V
-K
-F https://www.onsemi.com/pub/Collateral/NDS7002A-D.PDF
-$ENDCMP
-#
-#End Doc Library
