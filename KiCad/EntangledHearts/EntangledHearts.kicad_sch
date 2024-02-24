@@ -2894,7 +2894,7 @@
     (effects (font (size 1.27 1.27)) (justify left top))
     (uuid 8a90ebfc-f5bc-45fe-a30a-398485bccd95)
   )
-  (text_box "GPIO:\nEN: Enabled + PullUp\nGPIO_0: Boot + PullUp\nGPIO_1: Button + Digital Read, Internal PullUp\nGPIO_2: Photo + Analog Read\nGPIO_11: SDA + Digital Write\nGPIO_12: SCL + Digital Write\nGPIO_21: NeoPixel + Digital Write\n"
+  (text_box "GPIO:\nEN: Enabled + PullUp\nGPIO_0: Boot + PullUp\nGPIO_2: Photo + Analog Read\nGPIO_6: Button + Digital Read, Internal PullUp\nGPIO_11: SDA + Digital Write\nGPIO_12: SCL + Digital Write\nGPIO_18: NeoPixel + Digital Write\n"
     (at 218.44 158.75 0) (size 38.1 25.4)
     (stroke (width 0) (type default))
     (fill (type none))
