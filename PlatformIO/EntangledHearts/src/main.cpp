@@ -163,7 +163,7 @@ void loop() {
     }
   }
 
-  previous_state = current_state;  
+  previous_state = current_state;
   */
 
   /*
@@ -183,6 +183,7 @@ void loop() {
   }
   */
 
+  /*
   // I2C
   text_width = oled.getUTF8Width(text);
   static int y_offset = text_height + (oled_height-text_height)/2;
@@ -228,7 +229,8 @@ void loop() {
 
   Serial.println("");
 
-  delay(1000);     
+  delay(1000);
+  */   
 }
 
 void search_i2c()
