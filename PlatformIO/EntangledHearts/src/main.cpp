@@ -14,8 +14,14 @@
 #include <SSD1306AsciiWire.h>
 #include <U8g2lib.h>
 
+#include <WiFi.h>
+#include <PubSubClient.h>
+
+
 #include "credentials.h"
 #include "gpio_mapping.h"
+
+#include "logger.h"
 
 #define BAUD_RATE 9600
 
@@ -24,8 +30,8 @@
 uint8_t previous_state = HIGH;
 uint8_t current_state = HIGH;
 
-const char SSID[] = WIFI_SSID;
-const char PASS[] = WIFI_PASS;
+const char *SSID = WIFI_SSID;
+const char *PASS = WIFI_PASS;
 
 Adafruit_NeoPixel pixels{PIXELS, GPIO_NEOPIXEL, NEO_GRB + NEO_KHZ800};
 
@@ -42,7 +48,72 @@ int seconds = 0;
 
 char* text = (char*)malloc(8);
 
+const char *MQTT_ID = "Test ID";
+
+WiFiClient wiFiClient{};
+PubSubClient mqttClient{wiFiClient};
+
+Logger logger{"Foo"};
+
+void callback(char* topic, byte* payload, unsigned int length); 
+
 void setup() {
+  // Setup of Seriell-Connection
+  Serial.begin(BAUD_RATE);
+  while (!Serial);
+
+  logger.setSerial(&Serial);
+  
+  logger.log(Logger::Level::INFO, "Connected to Serial");
+
+  // Setup of MQTT-Broker
+
+  /*
+  mqttClient.setServer(MQTT_BROKER,  MQTT_PORT);
+
+  while (!mqttClient.connected()) {
+    if (!mqttClient.connect(MQTT_ID, MQTT_USER, MQTT_PASS)) {
+      logger.log(Logger::Level::ERROR, "Failed to connect to MQTT-Broker");
+      delay(500);
+    }
+  }
+
+  logger.setMqtt(&mqttClient);
+  logger.log(Logger::Level::INFO, "Connected to MQTT-Broker");
+  */
+
+  WiFi.setHostname("Foo");
+  WiFi.begin(WIFI_SSID, WIFI_PASS);
+
+  while (WiFi.status() != WL_CONNECTED)
+  {
+    delay(500);
+    Serial.println("Next attempt to connect WiFi...");
+  }
+
+  
+  Serial.println("Starting MQTT-Connection...");
+
+  mqttClient.setServer(MQTT_BROKER,  MQTT_PORT);
+  mqttClient.setCallback(callback);
+
+  while (!mqttClient.connected()) {
+    if (mqttClient.connect(MQTT_ID, MQTT_USER, MQTT_PASS)) {
+      //mqttClient.subscribe(mqtt_topic);
+      //mqttClient.subscribe(mqtt_color);
+    } else {
+      logger.log(Logger::Level::ERROR, "Failed to connect to MQTT-Broker");
+      //Serial.println(mqttClient.state());
+      delay(500);
+    }
+  }
+
+  logger.setMqtt(&mqttClient);
+  logger.log(Logger::Level::INFO, "Connected to MQTT-Broker");
+
+
+
+  /*
   // Setting PinModes
   pinMode(GPIO_BUTTON, INPUT_PULLUP);
   pinMode(GPIO_PHOTO, ANALOG);
@@ -139,9 +210,14 @@ void setup() {
     Serial.println("5 Hz");
     break;
   }
+  */
 }
 
 void loop() {
+  logger.log(Logger::Level::INFO, "Hello!");
+  //mqttClient.publish("/test", "Hello from Entagled Heart!");
+  delay(1000);
+
   /*
   // Photo + Button
   int value = analogRead(GPIO_PHOTO);
@@ -266,4 +342,10 @@ void search_i2c()
   else {
     Serial.println("done\n");
   }
+}
+
+void callback(char* topic, byte* payload, unsigned int length)
+{
+  Serial.print("Nachricht empfangen auf Thema: ");
+  Serial.println(topic);
 }
