@@ -8,6 +8,6 @@ services:
       - 1883:1883
       - 9001:9001
     volumes:
-      - ./mosquitto/config/:/mosquitto/config/
-      - ./mosquitto/log/:/mosquitto/log/
-      - ./mosquitto/data/:/mosquitto/data/
+      - ./mosquitto/config/:/mosquitto/config/:Z
+      - ./mosquitto/log/:/mosquitto/log/:Z
+      - ./mosquitto/data/:/mosquitto/data/:Z

@@ -49,3 +49,6 @@ rescue-backup/
 
 # Gerber export output
 *out/
+
+# Mosquitto Data
+/Broker/mosquitto/data/*.db
