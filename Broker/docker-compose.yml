@@ -11,3 +11,4 @@ services:
       - ./mosquitto/config/:/mosquitto/config/:Z
       - ./mosquitto/log/:/mosquitto/log/:Z
       - ./mosquitto/data/:/mosquitto/data/:Z
+    network_mode: host
