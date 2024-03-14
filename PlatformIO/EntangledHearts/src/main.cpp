@@ -66,22 +66,6 @@ void setup() {
   
   logger.log(Logger::Level::INFO, "Connected to Serial");
 
-  // Setup of MQTT-Broker
-
-  /*
-  mqttClient.setServer(MQTT_BROKER,  MQTT_PORT);
-
-  while (!mqttClient.connected()) {
-    if (!mqttClient.connect(MQTT_ID, MQTT_USER, MQTT_PASS)) {
-      logger.log(Logger::Level::ERROR, "Failed to connect to MQTT-Broker");
-      delay(500);
-    }
-  }
-
-  logger.setMqtt(&mqttClient);
-  logger.log(Logger::Level::INFO, "Connected to MQTT-Broker");
-  */
-
   WiFi.setHostname("Foo");
   WiFi.begin(WIFI_SSID, WIFI_PASS);
 
@@ -98,7 +82,8 @@ void setup() {
   mqttClient.setCallback(callback);
 
   while (!mqttClient.connected()) {
-    if (mqttClient.connect(MQTT_ID, MQTT_USER, MQTT_PASS)) {
+    //if (mqttClient.connect(MQTT_ID, MQTT_USER, MQTT_PASS)) {
+    if (mqttClient.connect(MQTT_ID)) {
       //mqttClient.subscribe(mqtt_topic);
       //mqttClient.subscribe(mqtt_color);
     } else {
@@ -108,17 +93,20 @@ void setup() {
     }
   }
 
+  mqttClient.setKeepAlive(5);
+
   logger.setMqtt(&mqttClient);
   logger.log(Logger::Level::INFO, "Connected to MQTT-Broker");
 
 
 
-  /*
+  
   // Setting PinModes
   pinMode(GPIO_BUTTON, INPUT_PULLUP);
   pinMode(GPIO_PHOTO, ANALOG);
   pinMode(GPIO_NEOPIXEL, OUTPUT);
 
+  /*
   // Starting Serial-Connection
   Serial.begin(BAUD_RATE);
   //while (!Serial){}
@@ -214,17 +202,18 @@ void setup() {
 }
 
 void loop() {
+  /*
   logger.log(Logger::Level::INFO, "Hello!");
   //mqttClient.publish("/test", "Hello from Entagled Heart!");
   delay(1000);
 
-  /*
   // Photo + Button
   int value = analogRead(GPIO_PHOTO);
   Serial.printf("Light: %d\n", value);
 
-  delay(500);
-
+  delay(500);  
+  */
+  
   current_state = digitalRead(GPIO_BUTTON);
 
   if (current_state != previous_state)
@@ -236,11 +225,13 @@ void loop() {
     if (current_state == LOW)
     {
       Serial.println("Butten pressed!");
+      mqttClient.publish("/test", "Butten pressed!");
     }
   }
 
   previous_state = current_state;
-  */
+
+  mqttClient.loop();
 
   /*
   // NeoPixel
