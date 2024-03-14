@@ -1,4 +1,4 @@
-version: "4"
+version: "3"
 
 services:
   mosquitto-brocker:
@@ -8,4 +8,6 @@ services:
       - 1883:1883
       - 9001:9001
     volumes:
-      - ./mosquitto/:/mosquitto/:rw,z
+      - ./mosquitto/config/:/mosquitto/config/
+      - ./mosquitto/log/:/mosquitto/log/
+      - ./mosquitto/data/:/mosquitto/data/
