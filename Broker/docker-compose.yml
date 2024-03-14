@@ -1,0 +1,11 @@
+version: "4"
+
+services:
+  mosquitto-brocker:
+    container_name: mosquitto
+    image: docker.io/library/eclipse-mosquitto:latest
+    ports:
+      - 1883:1883
+      - 9001:9001
+    volumes:
+      - ./mosquitto/:/mosquitto/:rw,z
