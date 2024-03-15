@@ -53,20 +53,22 @@ const char *MQTT_ID = "Test ID";
 WiFiClient wiFiClient{};
 PubSubClient mqttClient{wiFiClient};
 
-Logger logger{"Foo"};
+//Logger logger{"Foo"};
 
 void callback(char* topic, byte* payload, unsigned int length); 
 
 void setup() {
+  // Setup PinModes
+  pinMode(GPIO_BUTTON, INPUT_PULLUP);
+  pinMode(GPIO_PHOTO, ANALOG);
+  pinMode(GPIO_NEOPIXEL, OUTPUT);
+
   // Setup of Seriell-Connection
   Serial.begin(BAUD_RATE);
   while (!Serial);
 
-  logger.setSerial(&Serial);
-  
-  logger.log(Logger::Level::INFO, "Connected to Serial");
-
-  WiFi.setHostname("Foo");
+  // Setup WiFi
+  WiFi.setHostname("ET1");
   WiFi.begin(WIFI_SSID, WIFI_PASS);
 
   while (WiFi.status() != WL_CONNECTED)
@@ -75,7 +77,7 @@ void setup() {
     Serial.println("Next attempt to connect WiFi...");
   }
 
-  
+  // Setup MQTT
   Serial.println("Starting MQTT-Connection...");
 
   mqttClient.setServer(MQTT_BROKER,  MQTT_PORT);
@@ -87,24 +89,19 @@ void setup() {
       //mqttClient.subscribe(mqtt_topic);
       //mqttClient.subscribe(mqtt_color);
     } else {
-      logger.log(Logger::Level::ERROR, "Failed to connect to MQTT-Broker");
-      //Serial.println(mqttClient.state());
+      //logger.log(Logger::Level::ERROR, "Failed to connect to MQTT-Broker");
+      Serial.println(mqttClient.state());
       delay(500);
     }
   }
 
-  mqttClient.setKeepAlive(5);
-
-  logger.setMqtt(&mqttClient);
-  logger.log(Logger::Level::INFO, "Connected to MQTT-Broker");
-
+  //logger.setMqtt(&mqttClient);
+  //logger.log(Logger::Level::INFO, "Connected to MQTT-Broker");
+  Serial.println("Connected to MQTT-Broker");
 
 
   
-  // Setting PinModes
-  pinMode(GPIO_BUTTON, INPUT_PULLUP);
-  pinMode(GPIO_PHOTO, ANALOG);
-  pinMode(GPIO_NEOPIXEL, OUTPUT);
+
 
   /*
   // Starting Serial-Connection
@@ -213,7 +210,8 @@ void loop() {
 
   delay(500);  
   */
-  
+ 
+  /*
   current_state = digitalRead(GPIO_BUTTON);
 
   if (current_state != previous_state)
@@ -229,7 +227,8 @@ void loop() {
     }
   }
 
-  previous_state = current_state;
+  previous_state = current_state; 
+  */
 
   mqttClient.loop();
 
