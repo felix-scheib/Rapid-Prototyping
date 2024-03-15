@@ -30,9 +30,6 @@
 uint8_t previous_state = HIGH;
 uint8_t current_state = HIGH;
 
-const char *SSID = WIFI_SSID;
-const char *PASS = WIFI_PASS;
-
 Adafruit_NeoPixel pixels{PIXELS, GPIO_NEOPIXEL, NEO_GRB + NEO_KHZ800};
 
 Adafruit_MPU6050 mpu;
@@ -47,8 +44,6 @@ int minute = 0;
 int seconds = 0;
 
 char* text = (char*)malloc(8);
-
-const char *MQTT_ID = "Test ID";
 
 WiFiClient wiFiClient{};
 PubSubClient mqttClient{wiFiClient};
@@ -83,10 +78,12 @@ void setup() {
   mqttClient.setServer(MQTT_BROKER,  MQTT_PORT);
   mqttClient.setCallback(callback);
 
+  //TODO: reconnect
+
   while (!mqttClient.connected()) {
     //if (mqttClient.connect(MQTT_ID, MQTT_USER, MQTT_PASS)) {
-    if (mqttClient.connect(MQTT_ID)) {
-      //mqttClient.subscribe(mqtt_topic);
+    if (mqttClient.connect(HOSTNAME)) {
+      mqttClient.subscribe("/test");
       //mqttClient.subscribe(mqtt_color);
     } else {
       //logger.log(Logger::Level::ERROR, "Failed to connect to MQTT-Broker");
@@ -99,16 +96,7 @@ void setup() {
   //logger.log(Logger::Level::INFO, "Connected to MQTT-Broker");
   Serial.println("Connected to MQTT-Broker");
 
-
-  
-
-
   /*
-  // Starting Serial-Connection
-  Serial.begin(BAUD_RATE);
-  //while (!Serial){}
-  Serial.println("Connected to Serial");
-
   // NeoPixel
   pixels.begin();
 
@@ -199,6 +187,30 @@ void setup() {
 }
 
 void loop() {
+  //TODO: reconnect
+  mqttClient.loop();
+
+  current_state = digitalRead(GPIO_BUTTON);
+
+  if (current_state != previous_state)
+  {
+    if (current_state == HIGH)
+    {
+      Serial.println("Butten released!");
+    }
+    if (current_state == LOW)
+    {
+      Serial.println("Butten pressed!");
+      mqttClient.publish("/ET1", "Butten pressed!");
+    }
+  }
+
+  previous_state = current_state;
+
+
+
+
+
   /*
   logger.log(Logger::Level::INFO, "Hello!");
   //mqttClient.publish("/test", "Hello from Entagled Heart!");
@@ -230,7 +242,7 @@ void loop() {
   previous_state = current_state; 
   */
 
-  mqttClient.loop();
+  
 
   /*
   // NeoPixel
