@@ -75,10 +75,10 @@ void setup() {
   mqttClient.setup(MQTT_BROKER,  MQTT_PORT, callback);
   mqttClient.reconnect();
 
-  /*
   // NeoPixel
   pixels.begin();
 
+  /*
   // I2C
 
   // OLED
@@ -222,6 +222,7 @@ void loop() {
 
   
 
+
   /*
   // NeoPixel
   for (size_t i = 0; i < PIXELS; ++i)
@@ -326,6 +327,32 @@ void search_i2c()
 
 void callback(char* topic, byte* payload, unsigned int length)
 {
-  Serial.print("Nachricht empfangen auf Thema: ");
-  Serial.println(topic);
+  static bool mode = true;
+
+
+  if(strcmp(topic, SUB_TOPIC.c_str()) == 0) {
+    Serial.println("Received message on valid topic");
+    Serial.println(topic);
+
+    for (size_t i = 0; i < PIXELS; ++i) {
+      pixels.setPixelColor(i, pixels.Color(255,0,0));
+      pixels.show();
+    }
+
+    if (mode) {
+      for (size_t i = 0; i < PIXELS; ++i) {
+        pixels.setPixelColor(i, pixels.Color(255,0,0));
+        pixels.show();
+
+        mode = false;
+      }
+    } else {
+      for (size_t i = 0; i < PIXELS; ++i) {
+        pixels.setPixelColor(i, pixels.Color(0,0,0));
+        pixels.show();
+      }
+
+      mode = true;
+    }
+  }
 }
