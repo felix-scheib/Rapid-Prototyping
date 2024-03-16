@@ -15,12 +15,11 @@
 #include <U8g2lib.h>
 
 #include <WiFi.h>
-#include <PubSubClient.h>
-
 
 #include "credentials.h"
 #include "gpio_mapping.h"
 
+#include "mqtt.h"
 #include "logger.h"
 
 #define BAUD_RATE 9600
@@ -46,7 +45,7 @@ int seconds = 0;
 char* text = (char*)malloc(8);
 
 WiFiClient wiFiClient{};
-PubSubClient mqttClient{wiFiClient};
+Mqtt mqttClient{wiFiClient, HOSTNAME, SUB_TOPIC};
 
 //Logger logger{"Foo"};
 
@@ -63,8 +62,8 @@ void setup() {
   while (!Serial);
 
   // Setup WiFi
-  WiFi.setHostname("ET1");
-  WiFi.begin(WIFI_SSID, WIFI_PASS);
+  WiFi.setHostname(HOSTNAME.c_str());
+  WiFi.begin(WIFI_SSID.c_str(), WIFI_PASS.c_str());
 
   while (WiFi.status() != WL_CONNECTED)
   {
@@ -73,28 +72,8 @@ void setup() {
   }
 
   // Setup MQTT
-  Serial.println("Starting MQTT-Connection...");
-
-  mqttClient.setServer(MQTT_BROKER,  MQTT_PORT);
-  mqttClient.setCallback(callback);
-
-  //TODO: reconnect
-
-  while (!mqttClient.connected()) {
-    //if (mqttClient.connect(MQTT_ID, MQTT_USER, MQTT_PASS)) {
-    if (mqttClient.connect(HOSTNAME)) {
-      mqttClient.subscribe("/test");
-      //mqttClient.subscribe(mqtt_color);
-    } else {
-      //logger.log(Logger::Level::ERROR, "Failed to connect to MQTT-Broker");
-      Serial.println(mqttClient.state());
-      delay(500);
-    }
-  }
-
-  //logger.setMqtt(&mqttClient);
-  //logger.log(Logger::Level::INFO, "Connected to MQTT-Broker");
-  Serial.println("Connected to MQTT-Broker");
+  mqttClient.setup(MQTT_BROKER,  MQTT_PORT, callback);
+  mqttClient.reconnect();
 
   /*
   // NeoPixel
@@ -187,9 +166,12 @@ void setup() {
 }
 
 void loop() {
-  //TODO: reconnect
-  mqttClient.loop();
+  if (!mqttClient.client.connected()) {
+    mqttClient.reconnect();
+  }
 
+  mqttClient.client.loop();  
+  
   current_state = digitalRead(GPIO_BUTTON);
 
   if (current_state != previous_state)
@@ -201,15 +183,11 @@ void loop() {
     if (current_state == LOW)
     {
       Serial.println("Butten pressed!");
-      mqttClient.publish("/ET1", "Butten pressed!");
+      mqttClient.client.publish(PUB_TOPIC.c_str(), "Butten pressed!");
     }
   }
 
   previous_state = current_state;
-
-
-
-
 
   /*
   logger.log(Logger::Level::INFO, "Hello!");
