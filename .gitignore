@@ -52,3 +52,6 @@ rescue-backup/
 
 # Mosquitto Data
 /Broker/mosquitto/data/*.db
+
+# FreeCAD
+*.FCBak
