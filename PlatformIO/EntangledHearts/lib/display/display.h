@@ -13,12 +13,16 @@ struct Display {
     void setup();
     void update();
 
+    void set_contrast(uint8_t contrast, unsigned long fade = 0);
+    void update_contrast();
+
     static const int TEXT_HEIGHT;
     static const char *const DEFAULT_TIME;
 
     int current_hour, current_minute;
     int display_width, display_height;
     int text_width, text_height;
+    uint8_t current_contrast, wanted_contrast;
 
     char text[8];
 

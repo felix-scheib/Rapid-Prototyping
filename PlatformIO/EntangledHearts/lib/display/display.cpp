@@ -5,13 +5,14 @@ const char *const Display::DEFAULT_TIME = "00:00";
 
 
 Display::Display() :
-    display(U8G2_R0, U8X8_PIN_NONE), text_height(TEXT_HEIGHT) {
+    display(U8G2_R0, U8X8_PIN_NONE), text_height(TEXT_HEIGHT), current_contrast(0), wanted_contrast(0) {
 }
 
 void Display::setup() {
     display.begin();
     display.setFont(u8g2_font_logisoso42_tf);
     display.setDrawColor(1);
+    display.setContrast(current_contrast);
 
     display_width = display.getWidth();
     display_height = display.getHeight();
@@ -37,4 +38,18 @@ void Display::update() {
         } 
         while (display.nextPage());
     }
+
+    if (current_contrast != wanted_contrast) {
+        update_contrast();
+    }
+    
+}
+
+void Display::set_contrast(uint8_t contrast, unsigned long fade) {    
+    wanted_contrast = contrast;
+}
+
+void Display::update_contrast() {
+    display.setContrast(wanted_contrast);
+    current_contrast = wanted_contrast;
 }

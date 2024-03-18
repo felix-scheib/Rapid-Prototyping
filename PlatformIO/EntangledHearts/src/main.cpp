@@ -29,14 +29,15 @@ Adafruit_NeoPixel pixels{PIXELS, GPIO_NEOPIXEL, NEO_GRB + NEO_KHZ800};
 
 Adafruit_MPU6050 mpu;
 
-
-
 WiFiClient wiFiClient{};
 Mqtt mqttClient{wiFiClient, HOSTNAME, SUB_TOPIC};
 
 Display display{};
 
-void callback(char* topic, byte* payload, unsigned int length); 
+void callback(char* topic, byte* payload, unsigned int length);
+
+static bool pair_signal = false;
+static bool button_pressed = false;
 
 void setup() {
     // Setup PinModes
@@ -72,79 +73,6 @@ void setup() {
 
     // NeoPixel
     pixels.begin();
-
-    /*
-    // I2C
-    // OLED
-
-    // MPU
-    if (!mpu.begin()) {
-    Serial.println("Failed to find MPU6050 chip");
-    while (1) {
-      delay(10);
-    }
-    }
-    Serial.println("MPU6050 Found!");
-
-    mpu.setAccelerometerRange(MPU6050_RANGE_8_G);
-    Serial.print("Accelerometer range set to: ");
-    switch (mpu.getAccelerometerRange()) {
-    case MPU6050_RANGE_2_G:
-    Serial.println("+-2G");
-    break;
-    case MPU6050_RANGE_4_G:
-    Serial.println("+-4G");
-    break;
-    case MPU6050_RANGE_8_G:
-    Serial.println("+-8G");
-    break;
-    case MPU6050_RANGE_16_G:
-    Serial.println("+-16G");
-    break;
-    }
-    mpu.setGyroRange(MPU6050_RANGE_500_DEG);
-    Serial.print("Gyro range set to: ");
-    switch (mpu.getGyroRange()) {
-    case MPU6050_RANGE_250_DEG:
-    Serial.println("+- 250 deg/s");
-    break;
-    case MPU6050_RANGE_500_DEG:
-    Serial.println("+- 500 deg/s");
-    break;
-    case MPU6050_RANGE_1000_DEG:
-    Serial.println("+- 1000 deg/s");
-    break;
-    case MPU6050_RANGE_2000_DEG:
-    Serial.println("+- 2000 deg/s");
-    break;
-    }
-
-    mpu.setFilterBandwidth(MPU6050_BAND_21_HZ);
-    Serial.print("Filter bandwidth set to: ");
-    switch (mpu.getFilterBandwidth()) {
-    case MPU6050_BAND_260_HZ:
-    Serial.println("260 Hz");
-    break;
-    case MPU6050_BAND_184_HZ:
-    Serial.println("184 Hz");
-    break;
-    case MPU6050_BAND_94_HZ:
-    Serial.println("94 Hz");
-    break;
-    case MPU6050_BAND_44_HZ:
-    Serial.println("44 Hz");
-    break;
-    case MPU6050_BAND_21_HZ:
-    Serial.println("21 Hz");
-    break;
-    case MPU6050_BAND_10_HZ:
-    Serial.println("10 Hz");
-    break;
-    case MPU6050_BAND_5_HZ:
-    Serial.println("5 Hz");
-    break;
-    }
-    */
 }
 
 void loop() {
@@ -161,47 +89,39 @@ void loop() {
     if (current_state != previous_state) {
         if (current_state == HIGH) {
             Serial.println("Butten released!");
+            display.display.setContrast(0);
+
+            mqttClient.client.publish(PUB_TOPIC.c_str(), "n");
+
+            button_pressed = false;
+
+            if (pair_signal) {
+                for (size_t i = 0; i < PIXELS; ++i) {
+                    pixels.setPixelColor(i, pixels.Color(0,0,255));
+                    pixels.show();
+                }
+            }
+            
+
         }
         if (current_state == LOW) {
             Serial.println("Butten pressed!");
-            Serial.printf("%02d:%02d:%02d\n", hour(), minute(), second());
-            mqttClient.client.publish(PUB_TOPIC.c_str(), "Butten pressed!");
+            display.display.setContrast(255);
+
+            mqttClient.client.publish(PUB_TOPIC.c_str(), "y");
+
+            if (pair_signal) {
+                for (size_t i = 0; i < PIXELS; ++i) {
+                    pixels.setPixelColor(i, pixels.Color(255,0,0));
+                    pixels.show();
+                }
+            }
+
+            button_pressed = true;
         }
     }
 
     previous_state = current_state;
-
-/*
-// Photo
-int value = analogRead(GPIO_PHOTO);
-Serial.printf("Light: %d\n", value);
-*/
-
-/*
-// MPU
-sensors_event_t a, g, temp;
-mpu.getEvent(&a, &g, &temp);
-
-Serial.print("Acceleration X: ");
-Serial.print(a.acceleration.x);
-Serial.print(", Y: ");
-Serial.print(a.acceleration.y);
-Serial.print(", Z: ");
-Serial.print(a.acceleration.z);
-Serial.println(" m/s^2");
-
-Serial.print("Rotation X: ");
-Serial.print(g.gyro.x);
-Serial.print(", Y: ");
-Serial.print(g.gyro.y);
-Serial.print(", Z: ");
-Serial.print(g.gyro.z);
-Serial.println(" rad/s");
-
-Serial.println("");
-
-delay(1000);
-*/   
 }
 
 void search_i2c() {
@@ -237,31 +157,33 @@ void search_i2c() {
 }
 
 void callback(char* topic, byte* payload, unsigned int length) {
-    static bool mode = true;
-
     if(strcmp(topic, SUB_TOPIC.c_str()) == 0) {
         Serial.println("Received message on valid topic");
         Serial.println(topic);
 
-        for (size_t i = 0; i < PIXELS; ++i) {
-            pixels.setPixelColor(i, pixels.Color(255,0,0));
-            pixels.show();
+        if (length > 0 && payload[0] == 'y') {
+            pair_signal = true;
+
+            if (button_pressed) {
+                for (size_t i = 0; i < PIXELS; ++i) {
+                    pixels.setPixelColor(i, pixels.Color(255,0,0));
+                    pixels.show();
+                }
+            } else {
+                for (size_t i = 0; i < PIXELS; ++i) {
+                    pixels.setPixelColor(i, pixels.Color(0,0,255));
+                    pixels.show();
+                }
+            }
         }
 
-        if (mode) {
-            for (size_t i = 0; i < PIXELS; ++i) {
-            pixels.setPixelColor(i, pixels.Color(255,0,0));
-            pixels.show();
+        if (length > 0 && payload[0] == 'n') {
+            pair_signal = false;
 
-            mode = false;
-            }
-        } else {
             for (size_t i = 0; i < PIXELS; ++i) {
                 pixels.setPixelColor(i, pixels.Color(0,0,0));
                 pixels.show();
             }
-
-            mode = true;
         }
     }
 }
