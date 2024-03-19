@@ -3,6 +3,7 @@
 void fetch_time() {
     Serial.println("Fetching time from NTP-Server...");
 
+    /*
     WiFiUDP ntpUDP;
     NTPClient timeClient{ntpUDP};
 
@@ -29,4 +30,9 @@ void fetch_time() {
         Serial.println("Time set to NTP-time");
         setTime(timeClient.getEpochTime());
     }
+    */
+
+    Serial.println("All attempts failed, using default time");
+    //Can't reach NTP-Server, use default
+    setTime(DEFAULT_TIMESTAMP);
 }

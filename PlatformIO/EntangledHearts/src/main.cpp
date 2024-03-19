@@ -36,8 +36,15 @@ Display display{};
 
 void callback(char* topic, byte* payload, unsigned int length);
 
+uint16_t get_intensity();
+
 static bool pair_signal = false;
 static bool button_pressed = false;
+
+static bool display_active = false;
+
+static unsigned long start_time = 0;
+static unsigned long ellapsed_time = 0;
 
 void setup() {
     // Setup PinModes
@@ -84,6 +91,7 @@ void loop() {
 
     mqttClient.client.loop();  
 
+    /*
     current_state = digitalRead(GPIO_BUTTON);
 
     if (current_state != previous_state) {
@@ -122,6 +130,29 @@ void loop() {
     }
 
     previous_state = current_state;
+    */
+
+    if (!display_active) {
+        uint32_t intensity = get_intensity();
+
+        if(intensity > 100) {
+            Serial.println("Enable Display...");
+
+            display.display.setContrast(255);
+            display_active = true;
+
+            start_time = millis();
+        }        
+    }
+
+    if (display_active) {
+        if ((millis() - start_time) > 5000) {
+            Serial.println("Disable Display...");
+
+            display_active = false;
+            display.display.setContrast(0);
+        }
+    }
 }
 
 void search_i2c() {
@@ -161,6 +192,7 @@ void callback(char* topic, byte* payload, unsigned int length) {
         Serial.println("Received message on valid topic");
         Serial.println(topic);
 
+        /*
         if (length > 0 && payload[0] == 'y') {
             pair_signal = true;
 
@@ -185,5 +217,18 @@ void callback(char* topic, byte* payload, unsigned int length) {
                 pixels.show();
             }
         }
+        */
     }
+}
+
+uint16_t get_intensity() {
+    uint32_t measurements = 0;
+
+    for (size_t i = 0; i < 32; ++i) {
+        measurements += analogRead(GPIO_PHOTO);
+    }
+
+    measurements /= 32;
+
+    return 4095 - analogRead(GPIO_PHOTO);
 }
