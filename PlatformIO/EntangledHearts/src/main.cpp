@@ -5,8 +5,6 @@
 #include <avr/power.h>
 #endif
 
-#include <Adafruit_MPU6050.h>
-#include <Adafruit_Sensor.h>
 #include <Wire.h>
 
 #include <WiFi.h>
@@ -15,6 +13,7 @@
 #include "gpio_mapping.h"
 
 #include "display.h"
+#include "mpu.h"
 #include "mqtt.h"
 #include "ntp.h"
 
@@ -22,26 +21,30 @@
 
 #define PIXELS 6
 
+static const uint16_t INTENSITY_THRESHOLD = 100;
+static const uint16_t BRIGHTNESS_MAX = 4095;
+
 uint8_t previous_state = HIGH;
 uint8_t current_state = HIGH;
 
 Adafruit_NeoPixel pixels{PIXELS, GPIO_NEOPIXEL, NEO_GRB + NEO_KHZ800};
-
-Adafruit_MPU6050 mpu;
 
 WiFiClient wiFiClient{};
 Mqtt mqttClient{wiFiClient, HOSTNAME, SUB_TOPIC};
 
 Display display{};
 
+Mpu mpu{};
+
 void callback(char* topic, byte* payload, unsigned int length);
 
 uint16_t get_intensity();
+void set_neo_pixel(uint8_t r = 0, uint8_t b = 0, uint8_t g = 0);
 
 static bool pair_signal = false;
 static bool button_pressed = false;
 
-static bool display_active = false;
+static bool attraction_mode = false;
 
 static unsigned long start_time = 0;
 static unsigned long ellapsed_time = 0;
@@ -74,6 +77,9 @@ void setup() {
     // Setup display
     display.setup();
 
+    // Setup mpu
+    mpu.setup();
+
     // Setup MQTT
     mqttClient.setup(MQTT_BROKER,  MQTT_PORT, callback);
     mqttClient.reconnect();
@@ -91,67 +97,52 @@ void loop() {
 
     mqttClient.client.loop();  
 
-    /*
-    current_state = digitalRead(GPIO_BUTTON);
+    if (!attraction_mode) {
+        uint32_t intensity = get_intensity();
+        bool is_bright = (intensity > INTENSITY_THRESHOLD);
 
-    if (current_state != previous_state) {
-        if (current_state == HIGH) {
-            Serial.println("Butten released!");
-            display.display.setContrast(0);
+        bool is_movement = mpu.update();
 
-            mqttClient.client.publish(PUB_TOPIC.c_str(), "n");
+        bool button_pressed = (digitalRead(GPIO_BUTTON) == LOW);
 
-            button_pressed = false;
+        if ((is_bright && is_movement) || button_pressed) {
+            Serial.print("Enable Display by: ");
 
-            if (pair_signal) {
-                for (size_t i = 0; i < PIXELS; ++i) {
-                    pixels.setPixelColor(i, pixels.Color(0,0,255));
-                    pixels.show();
-                }
+            if ((is_bright && is_movement)) {
+                Serial.println("movement");
             }
-            
 
-        }
-        if (current_state == LOW) {
-            Serial.println("Butten pressed!");
-            display.display.setContrast(255);
+            if (button_pressed) {
+                Serial.println("button");
+            }
 
             mqttClient.client.publish(PUB_TOPIC.c_str(), "y");
 
-            if (pair_signal) {
-                for (size_t i = 0; i < PIXELS; ++i) {
-                    pixels.setPixelColor(i, pixels.Color(255,0,0));
-                    pixels.show();
-                }
-            }
-
-            button_pressed = true;
-        }
-    }
-
-    previous_state = current_state;
-    */
-
-    if (!display_active) {
-        uint32_t intensity = get_intensity();
-
-        if(intensity > 100) {
-            Serial.println("Enable Display...");
-
             display.display.setContrast(255);
-            display_active = true;
+            attraction_mode = true;
 
             start_time = millis();
-        }        
-    }
-
-    if (display_active) {
+        }
+    } else {
         if ((millis() - start_time) > 5000) {
             Serial.println("Disable Display...");
 
-            display_active = false;
+            mqttClient.client.publish(PUB_TOPIC.c_str(), "n");
+
             display.display.setContrast(0);
+            attraction_mode = false;
         }
+    }
+
+    if (attraction_mode && pair_signal) {
+        Serial.println("Set NeoPixel red...");
+        set_neo_pixel(255, 0, 0);
+    } else if (pair_signal) {
+        Serial.println("Set NeoPixel blue...");
+        set_neo_pixel(0, 0, 255);
+    } else {
+        Serial.println("Disable NeoPixel...");
+        set_neo_pixel(0, 0, 0);
     }
 }
 
@@ -192,32 +183,13 @@ void callback(char* topic, byte* payload, unsigned int length) {
         Serial.println("Received message on valid topic");
         Serial.println(topic);
 
-        /*
         if (length > 0 && payload[0] == 'y') {
             pair_signal = true;
-
-            if (button_pressed) {
-                for (size_t i = 0; i < PIXELS; ++i) {
-                    pixels.setPixelColor(i, pixels.Color(255,0,0));
-                    pixels.show();
-                }
-            } else {
-                for (size_t i = 0; i < PIXELS; ++i) {
-                    pixels.setPixelColor(i, pixels.Color(0,0,255));
-                    pixels.show();
-                }
-            }
         }
 
         if (length > 0 && payload[0] == 'n') {
             pair_signal = false;
-
-            for (size_t i = 0; i < PIXELS; ++i) {
-                pixels.setPixelColor(i, pixels.Color(0,0,0));
-                pixels.show();
-            }
         }
-        */
     }
 }
 
@@ -230,5 +202,12 @@ uint16_t get_intensity() {
 
     measurements /= 32;
 
-    return 4095 - analogRead(GPIO_PHOTO);
+    return BRIGHTNESS_MAX - measurements;
+}
+
+void set_neo_pixel(uint8_t r, uint8_t g, uint8_t b) {
+        for (size_t i = 0; i < PIXELS; ++i) {
+        pixels.setPixelColor(i, r, g, b);
+        pixels.show();
+    }
 }

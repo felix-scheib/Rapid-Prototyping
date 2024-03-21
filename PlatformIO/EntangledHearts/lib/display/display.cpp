@@ -9,6 +9,11 @@ Display::Display() :
 }
 
 void Display::setup() {
+    while (!display.begin()) {
+        Serial.println("Can't find display...");
+        delay(500);
+    }
+    
     display.begin();
     display.setFont(u8g2_font_logisoso42_tf);
     display.setDrawColor(1);
@@ -18,6 +23,8 @@ void Display::setup() {
     display_height = display.getHeight();
 
     sprintf(text, DEFAULT_TIME);
+
+    Serial.println("Successfully initialized display");
 }
 
 void Display::update() {
