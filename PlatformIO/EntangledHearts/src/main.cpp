@@ -15,6 +15,7 @@
 #include "display.h"
 #include "mpu.h"
 #include "mqtt.h"
+#include "neopixel.h"
 #include "ntp.h"
 
 #define BAUD_RATE 9600
@@ -24,10 +25,11 @@
 static const uint16_t INTENSITY_THRESHOLD = 100;
 static const uint16_t BRIGHTNESS_MAX = 4095;
 
+static unsigned long ACTIVE_TIME = 10 * 1000;
+
+
 uint8_t previous_state = HIGH;
 uint8_t current_state = HIGH;
-
-Adafruit_NeoPixel pixels{PIXELS, GPIO_NEOPIXEL, NEO_GRB + NEO_KHZ800};
 
 WiFiClient wiFiClient{};
 Mqtt mqttClient{wiFiClient, HOSTNAME, SUB_TOPIC};
@@ -36,10 +38,11 @@ Display display{};
 
 Mpu mpu{};
 
+Neopixel neopixel{GPIO_NEOPIXEL, PIXELS};
+
 void callback(char* topic, byte* payload, unsigned int length);
 
 uint16_t get_intensity();
-void set_neo_pixel(uint8_t r = 0, uint8_t b = 0, uint8_t g = 0);
 
 static bool pair_signal = false;
 static bool button_pressed = false;
@@ -85,7 +88,7 @@ void setup() {
     mqttClient.reconnect();
 
     // NeoPixel
-    pixels.begin();
+    neopixel.setup();
 }
 
 void loop() {
@@ -124,7 +127,7 @@ void loop() {
             start_time = millis();
         }
     } else {
-        if ((millis() - start_time) > 5000) {
+        if ((millis() - start_time) > ACTIVE_TIME) {
             Serial.println("Disable Display...");
 
             mqttClient.client.publish(PUB_TOPIC.c_str(), "n");
@@ -135,15 +138,14 @@ void loop() {
     }
 
     if (attraction_mode && pair_signal) {
-        Serial.println("Set NeoPixel red...");
-        set_neo_pixel(255, 0, 0);
+        neopixel.set_mode(Neopixel::Mode::RED);
     } else if (pair_signal) {
-        Serial.println("Set NeoPixel blue...");
-        set_neo_pixel(0, 0, 255);
+        neopixel.set_mode(Neopixel::Mode::BLUE);
     } else {
-        Serial.println("Disable NeoPixel...");
-        set_neo_pixel(0, 0, 0);
+        neopixel.set_mode(Neopixel::Mode::NONE);
     }
+
+    neopixel.update();
 }
 
 void search_i2c() {
@@ -203,11 +205,4 @@ uint16_t get_intensity() {
     measurements /= 32;
 
     return BRIGHTNESS_MAX - measurements;
-}
-
-void set_neo_pixel(uint8_t r, uint8_t g, uint8_t b) {
-        for (size_t i = 0; i < PIXELS; ++i) {
-        pixels.setPixelColor(i, r, g, b);
-        pixels.show();
-    }
 }
