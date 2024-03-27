@@ -1,6 +1,6 @@
 # 1. Credentials
 
-To enter your credentials create `lib/credentials.h` and use the follwoing template. Git will ignore this file so your credentials stay local!
+To enter your credentials create `include/credentials.h` and use the follwoing template. Git will ignore this file so your credentials stay local!
 
 ```c
 #ifndef CREDENTIALS_H
